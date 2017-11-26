@@ -36,6 +36,21 @@ typedef	struct	s_llst
 	struct s_llst		*next;
 }		t_llst;
 
+typedef struct	s_graph
+{
+	size_t	vertices;
+	size_t	edges;
+	char	*start;
+	char	*end;
+	t_llst	**adj_lsts;
+}		t_graph;
+
+typedef struct	s_symtab_node
+{
+	void	*key;
+	void	*value;
+}		t_symtab_node;
+
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
