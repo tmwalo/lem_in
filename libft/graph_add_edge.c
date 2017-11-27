@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 10:53:05 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/27 11:50:07 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/27 12:02:58 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b)
 {
-	t_llst	*adj_lsts;
+	t_llst	**adj_lsts;
 	t_llst	*new_node_a;
 	t_llst	*new_node_b;
 
