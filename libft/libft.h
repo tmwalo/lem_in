@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/27 11:33:24 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/27 12:47:45 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ typedef	struct	s_llst
 
 typedef struct	s_graph
 {
-	size_t		vertices;
-	size_t		edges;
+	int			vertices;
+	int			edges;
 	t_llst		**adj_lsts;
 }				t_graph;
 
@@ -120,7 +120,7 @@ t_llst			*llst_new(void *value, size_t size);
 void			llst_add(t_llst **alst, t_llst *new);
 void			llst_delone(t_llst **alst);
 void			llst_del(t_llst **alst);
-int				init_graph(t_graph *pt_graph, size_t vertices);
+int				init_graph(t_graph *pt_graph, int vertices);
 void			graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b);
 
 #endif
