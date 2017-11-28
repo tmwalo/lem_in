@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/08/29 15:01:18 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/27 12:47:45 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,21 @@ typedef struct	s_stack_ll
 typedef	struct	s_llst
 {
 	void			*value;
-	struct s_llst		*next;
-}		t_llst;
+	struct s_llst	*next;
+}				t_llst;
+
+typedef struct	s_graph
+{
+	int			vertices;
+	int			edges;
+	t_llst		**adj_lsts;
+}				t_graph;
+
+typedef struct	s_symtab_node
+{
+	void	*key;
+	void	*value;
+}				t_symtab_node;
 
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
@@ -103,9 +116,11 @@ int				ft_push_ll(t_stack_ll *stack, void const *content, size_t len);
 t_list			*ft_pop_ll(t_stack_ll *stack);
 size_t			ft_stack_size_ll(t_stack_ll *stack);
 
-t_llst		*llst_new(void *value, size_t size);
-void		llst_add(t_llst **alst, t_llst *new);
-void		llst_delone(t_llst **alst);
-void		llst_del(t_llst **alst);
+t_llst			*llst_new(void *value, size_t size);
+void			llst_add(t_llst **alst, t_llst *new);
+void			llst_delone(t_llst **alst);
+void			llst_del(t_llst **alst);
+int				init_graph(t_graph *pt_graph, int vertices);
+void			graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b);
 
 #endif
