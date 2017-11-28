@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/07/03 13:41:54 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/11/27 15:09:11 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -151,4 +151,10 @@ llst_delone: llst_delone_test.c
 	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
 
 llst_del: llst_del_test.c
+	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
+
+init_graph: init_graph_test.c
+	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
+
+graph_add_edge: graph_add_edge_test.c
 	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
