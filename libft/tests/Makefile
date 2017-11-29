@@ -167,3 +167,9 @@ st_node_delone: st_node_delone_test.c
 
 st_put: st_put_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+st_get: st_get_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+st_contains: st_contains_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

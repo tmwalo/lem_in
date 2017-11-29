@@ -46,7 +46,9 @@ typedef struct	s_graph
 typedef struct	s_st_node
 {
 	void	*key;
+	int	size_key;
 	void	*value;
+	int	size_value;
 }				t_st_node;
 
 void			*ft_memset(void *s, int c, size_t n);
@@ -127,5 +129,7 @@ void			graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b);
 t_st_node		*st_node_new(void *key, int size_k, void *value, int size_v);
 void			st_node_delone(t_st_node **alst);
 void			st_put(t_llst **begin, char *key, int value);
+void			*st_get(t_llst *begin, void *key);
+int			st_contains(t_llst *begin, void *key);
 
 #endif

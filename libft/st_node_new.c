@@ -25,9 +25,11 @@ t_st_node	*st_node_new(void *key, int size_k, void *value, int size_v)
 	if (pt_st_node->key == NULL)
 		return (NULL);
 	ft_memmove(pt_st_node->key, key, size_k);
+	pt_st_node->size_key = size_k;
 	pt_st_node->value = malloc(size_v);
 	if (pt_st_node->value == NULL)
 		return (NULL);
 	ft_memmove(pt_st_node->value, value, size_v);
+	pt_st_node->size_value = size_v;
 	return (pt_st_node);
 }
