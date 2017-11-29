@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/11/27 12:00:38 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/11/29 12:21:19 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
       ft_itoa.c ft_putnbr.c ft_putnbr_fd.c ft_strsplit.c \
       ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
       ft_stack_init_ll.c ft_stack_check_empty_ll.c ft_push_ll.c ft_pop_ll.c ft_stack_size_ll.c \
-      llst_new.c llst_add.c llst_delone.c llst_del.c init_graph.c graph_add_edge.c
+      llst_new.c llst_add.c llst_delone.c llst_del.c init_graph.c graph_add_edge.c \
+	  st_node_new.c
 
 OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_putendl_fd.o \
       ft_striter.o ft_striteri.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
@@ -34,7 +35,8 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
       ft_itoa.o ft_putnbr.o ft_putnbr_fd.o ft_strsplit.o \
       ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
       ft_stack_init_ll.o ft_stack_check_empty_ll.o ft_push_ll.o ft_pop_ll.o ft_stack_size_ll.o \
-      llst_new.o llst_add.o llst_delone.o llst_del.o init_graph.o graph_add_edge.o
+      llst_new.o llst_add.o llst_delone.o llst_del.o init_graph.o graph_add_edge.o \
+	  st_node_new.o
 
 FLAGS = -Wall -Wextra -Werror
 

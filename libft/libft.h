@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/27 12:47:45 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/29 12:18:05 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ typedef struct	s_graph
 	t_llst		**adj_lsts;
 }				t_graph;
 
-typedef struct	s_symtab_node
+typedef struct	s_st_node
 {
 	void	*key;
 	void	*value;
-}				t_symtab_node;
+}				t_st_node;
 
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
@@ -120,7 +120,10 @@ t_llst			*llst_new(void *value, size_t size);
 void			llst_add(t_llst **alst, t_llst *new);
 void			llst_delone(t_llst **alst);
 void			llst_del(t_llst **alst);
+
 int				init_graph(t_graph *pt_graph, int vertices);
 void			graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b);
+
+t_st_node		*st_node_new(void *key, int size_k, void *value, int size_v);
 
 #endif
