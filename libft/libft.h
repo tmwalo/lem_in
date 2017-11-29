@@ -131,5 +131,6 @@ void			st_node_delone(t_st_node **alst);
 void			st_put(t_llst **begin, char *key, int value);
 void			*st_get(t_llst *begin, void *key);
 int			st_contains(t_llst *begin, void *key);
+int			st_size(t_llst *begin);
 
 #endif
