@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/11/29 12:31:30 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/11/29 13:19:43 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -160,4 +160,7 @@ graph_add_edge: graph_add_edge_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 st_node_new: st_node_new_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+st_node_delone: st_node_delone_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

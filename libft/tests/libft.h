@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/29 12:18:05 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/29 12:51:48 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,5 +125,6 @@ int				init_graph(t_graph *pt_graph, int vertices);
 void			graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b);
 
 t_st_node		*st_node_new(void *key, int size_k, void *value, int size_v);
+void			st_node_delone(t_st_node **alst);
 
 #endif
