@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/11/27 15:09:11 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/11/29 11:19:33 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -157,4 +157,4 @@ init_graph: init_graph_test.c
 	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
 
 graph_add_edge: graph_add_edge_test.c
-	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

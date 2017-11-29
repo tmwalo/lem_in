@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 13:02:35 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/27 17:11:05 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/29 11:18:12 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,19 @@ int		main(void)
 		++adj_lsts;
 		--count;
 	}
+
+	count = pt_graph->vertices;
+	adj_lsts = pt_graph->adj_lsts;
+	while (count > 0)
+	{
+		list = *adj_lsts;
+		llst_del(&list);
+		++adj_lsts;
+		--count;
+	}
+
+	adj_lsts = pt_graph->adj_lsts;
+	free(adj_lsts);
 
 	return (0);
 }
