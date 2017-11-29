@@ -126,5 +126,6 @@ void			graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b);
 
 t_st_node		*st_node_new(void *key, int size_k, void *value, int size_v);
 void			st_node_delone(t_st_node **alst);
+void			st_put(t_llst **begin, char *key, int value);
 
 #endif

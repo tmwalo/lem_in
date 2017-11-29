@@ -164,3 +164,6 @@ st_node_new: st_node_new_test.c
 
 st_node_delone: st_node_delone_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+st_put: st_put_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
