@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/30 14:02:20 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/30 14:28:21 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,5 +134,6 @@ int				st_contains(t_llst *begin, void *key);
 int				st_size(t_llst *begin);
 
 int				ft_isnum(char *str);
+int				ft_iscommand(char *str);
 
 #endif

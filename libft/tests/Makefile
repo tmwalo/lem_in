@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/11/30 14:13:53 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/11/30 14:35:16 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -178,4 +178,7 @@ st_size: st_size_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 ft_isnum: ft_isnum_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+ft_iscommand: ft_iscommand_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
