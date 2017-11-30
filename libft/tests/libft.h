@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/29 12:51:48 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/30 14:02:20 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,9 @@ t_st_node		*st_node_new(void *key, int size_k, void *value, int size_v);
 void			st_node_delone(t_st_node **alst);
 void			st_put(t_llst **begin, char *key, int value);
 void			*st_get(t_llst *begin, void *key);
-int			st_contains(t_llst *begin, void *key);
-int			st_size(t_llst *begin);
+int				st_contains(t_llst *begin, void *key);
+int				st_size(t_llst *begin);
+
+int				ft_isnum(char *str);
 
 #endif
