@@ -51,6 +51,16 @@ typedef struct	s_st_node
 	int	size_value;
 }				t_st_node;
 
+typedef	struct	s_symgraph
+{
+	t_llst		*st_begin;
+	char		**keys;
+	t_graph		*pt_graph;
+	int		num_ants;
+	char		*start;
+	char		*end;
+}		t_symgraph;
+
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -138,5 +148,7 @@ int				ft_iscommand(char *str);
 int				ft_iscomment(char *str);
 int				ft_isvertex(char *str);
 int				ft_isedge(char *str);
+
+void			init_symgraph(t_symgraph *pt_symgraph, int vertices, char *s, char *e);
 
 #endif

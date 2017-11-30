@@ -191,3 +191,6 @@ ft_isvertex: ft_isvertex_test.c
 
 ft_isedge: ft_isedge_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+init_symgraph: init_symgraph_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
