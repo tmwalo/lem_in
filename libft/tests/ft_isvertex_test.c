@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 15:02:16 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/30 16:00:55 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/30 16:40:16 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ int		main(void)
 
 	ret = ft_isvertex("12 764 87");
 	printf("%s\n", (ret == 1) ? "PASS" : "FAIL");
+
+	ret = ft_isvertex("12 764 87 9473");
+	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
 
 	ret = ft_isvertex("12 764");
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
