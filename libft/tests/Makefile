@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/11/30 15:07:21 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/11/30 16:18:07 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -187,4 +187,7 @@ ft_iscomment: ft_iscomment_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 ft_isvertex: ft_isvertex_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+ft_isedge: ft_isedge_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

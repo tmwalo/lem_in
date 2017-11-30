@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/30 14:59:02 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/11/30 16:11:31 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,5 +137,6 @@ int				ft_isnum(char *str);
 int				ft_iscommand(char *str);
 int				ft_iscomment(char *str);
 int				ft_isvertex(char *str);
+int				ft_isedge(char *str);
 
 #endif
