@@ -132,6 +132,12 @@ ft_strtrim: ft_strtrim_test.c
 ft_strsplit: ft_strsplit_test.c
 	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
 
+ft_strtok: ft_strtok_test.c
+	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
+
+free_splitstr: free_splitstr_test.c
+	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
+
 ft_strlen: ft_strlen_test.c
 	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
 
@@ -190,6 +196,9 @@ ft_isvertex: ft_isvertex_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 ft_isedge: ft_isedge_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+ft_not_empty: ft_not_empty_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 init_symgraph: init_symgraph_test.c

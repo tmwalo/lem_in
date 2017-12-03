@@ -17,6 +17,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+#define NEMPTY	1
+#define	VERTX	2
+#define	EDGE	3
+#define	CMD	4
+#define CMT	5
+#define NUM	6
+
 typedef struct	s_list
 {
 	void			*content;
@@ -105,6 +112,8 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+char			**ft_strtok(char const *s);
+void			free_splitstr(char ***str_array);
 char			*ft_itoa(int n);
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);
@@ -148,6 +157,7 @@ int				ft_iscommand(char *str);
 int				ft_iscomment(char *str);
 int				ft_isvertex(char *str);
 int				ft_isedge(char *str);
+int				ft_not_empty(char *str);
 
 void			init_symgraph(t_symgraph *pt_symgraph, int vertices, char *s, char *e);
 
