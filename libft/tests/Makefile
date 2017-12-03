@@ -209,3 +209,6 @@ init_symgraph: init_symgraph_test.c
 
 read_file: read_file_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+validate_graph_input: validate_graph_input_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

@@ -26,6 +26,8 @@
 # define CMT	5
 # define NUM	6
 
+# define VALIDATORS 6
+
 typedef struct	s_list
 {
 	void			*content;
@@ -166,5 +168,11 @@ int				ft_not_empty(char *str);
 void			init_symgraph(t_symgraph *pt_symgraph, int vertices, char *s, char *e);
 
 t_llst			*read_file(int fd);
+
+typedef int		(*graph_input)(char *);
+
+int			validate_graph_input(char *str);
+void			init_validators(graph_input **validator);
+
 
 #endif
