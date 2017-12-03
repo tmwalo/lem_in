@@ -215,3 +215,6 @@ validate_graph_input: validate_graph_input_test.c
 
 validate_graph_file: validate_graph_file_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+count_vertices: count_vertices_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
