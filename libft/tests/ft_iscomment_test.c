@@ -27,7 +27,7 @@ int		main(void)
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
 
 	ret = ft_iscomment("#is a command");
-	printf("%s\n", (ret == 1) ? "PASS" : "FAIL");
+	printf("%s\n", (ret) ? "PASS" : "FAIL");
 
 	ret = ft_iscomment("###3hashes");
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");

@@ -24,7 +24,7 @@ int		main(void)
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
 
 	ret = ft_isnum("23989");
-	printf("%s\n", (ret == 1) ? "PASS" : "FAIL");
+	printf("%s\n", (ret) ? "PASS" : "FAIL");
 
 	ret = ft_isnum("774jhbdfg");
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");

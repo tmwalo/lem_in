@@ -11,37 +11,32 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_isedge(char *str)
 {
-	char	**words;
-	char	**first_word_array;
-	int		num_words;
+	char	**tokens;
+	char	**first_token_array;
+	int		num_tokens;
+	int		error;
 
 	if ((str == NULL) || (ft_strlen(str) == 0))
 		return (0);
-	words = ft_strsplit(str, ' ');
-	if (!(*words))
-		return (0);
-	if ((!ft_iscomment(words[1])) && (words[1] != '\0'))
-		return (0);
-	first_word_array = ft_strsplit(*words, '-');
-	if (!(*first_word_array))
-		return (0);
-	num_words = 0;
-	while (*first_word_array != '\0')
+	tokens = ft_strtok(str);
+	error = 0;
+	first_token_array = ft_strsplit(*tokens, '-');
+	num_tokens = 0;
+	while ((*first_token_array != '\0') && !error)
 	{
-		if ((num_words < 2) && (ft_isnum(*first_word_array) == 0))
-			return (0);
-		if ((num_words == 2) && (ft_iscomment(*first_word_array) == 0))
-			return (0);
-		if (num_words == 2)
-			break ;
-		++num_words;
-		++first_word_array;
+		++num_tokens;
+		if (!ft_isnum(*first_token_array) || (num_tokens > 2))
+			error = 1;
+		++first_token_array;
 	}
-	if (num_words < 2)
-		return (0);
-	else
-		return (1);
+	if ((num_tokens > 0) && !ft_iscomment(tokens[1]) && (tokens[1] != '\0'))
+		error = 1;
+	first_token_array = first_token_array - num_tokens;
+	free_splitstr(&first_token_array);
+	free_splitstr(&tokens);
+	return (((num_tokens <= 1) || error) ? 0 : EDGE);
 }

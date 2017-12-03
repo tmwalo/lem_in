@@ -14,28 +14,28 @@
 
 int	ft_isvertex(char *str)
 {
-	char	**words;
-	int		num_words;
+	char	**tokens;
+	int		num_tokens;
+	int		error;
 
 	if ((str == NULL) || (ft_strlen(str) == 0))
 		return (0);
-	words = ft_strsplit(str, ' ');
-	if (!(*words))
-		return (0);
-	num_words = 0;
-	while (*words != '\0')
+	tokens = ft_strtok(str);
+	error = 0;
+	num_tokens = 0;
+	while ((*tokens != '\0') && (num_tokens <= 4) && !error)
 	{
-		if ((num_words < 3) && (ft_isnum(*words) == 0))
-			return (0);
-		if ((num_words == 3) && (ft_iscomment(*words) == 0))
-			return (0);
-		if (num_words == 3)
-			break ;
-		++num_words;
-		++words;
+		++num_tokens;
+		if ((num_tokens <= 3) && (!ft_isnum(*tokens)))
+			error = 1;
+		if ((num_tokens == 4) && (!ft_iscomment(*tokens)))
+			error = 1;
+		++tokens;
 	}
-	if (num_words < 3)
+	tokens = tokens - num_tokens;
+	free_splitstr(&tokens);
+	if ((num_tokens <= 2) || error)
 		return (0);
 	else
-		return (1);
+		return (VERTX);
 }

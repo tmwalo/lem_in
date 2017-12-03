@@ -24,13 +24,13 @@ int		main(void)
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
 
 	ret = ft_iscommand("##start");
-	printf("%s\n", (ret == 1) ? "PASS" : "FAIL");
+	printf("%s\n", (ret) ? "PASS" : "FAIL");
 
 	ret = ft_iscommand("#not a command");
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
 
 	ret = ft_iscommand("###3hashes");
-	printf("%s\n", (ret == 1) ? "PASS" : "FAIL");
+	printf("%s\n", (ret) ? "PASS" : "FAIL");
 
 	return (0);
 }

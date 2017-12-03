@@ -17,7 +17,7 @@ int	ft_iscommand(char *str)
 	if ((str == NULL) || (ft_strlen(str) == 0))
 		return (0);
 	if ((ft_strlen(str) > 0) && (str[0] == '#') && (str[1] == '#'))
-		return (1);
+		return (CMD);
 	else
 		return (0);
 }
