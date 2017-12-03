@@ -17,12 +17,14 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-#define NEMPTY	1
-#define	VERTX	2
-#define	EDGE	3
-#define	CMD	4
-#define CMT	5
-#define NUM	6
+# define BUFF_SIZE 4
+
+# define NEMPTY	1
+# define VERTX	2
+# define EDGE	3
+# define CMD	4
+# define CMT	5
+# define NUM	6
 
 typedef struct	s_list
 {
@@ -136,6 +138,8 @@ int				ft_stack_check_empty_ll(t_stack_ll *stack);
 int				ft_push_ll(t_stack_ll *stack, void const *content, size_t len);
 t_list			*ft_pop_ll(t_stack_ll *stack);
 size_t			ft_stack_size_ll(t_stack_ll *stack);
+
+int			get_next_line(const int fd, char **line);
 
 t_llst			*llst_new(void *value, size_t size);
 void			llst_add(t_llst **alst, t_llst *new);

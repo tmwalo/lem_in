@@ -147,6 +147,9 @@ ft_realloc: ft_realloc_test.c
 ft_stack_ll: ft_stack_ll_test.c
 	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
 
+gnl: gnl_test.c
+	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
+
 llst_new: llst_new_test.c
 	gcc -o $@ $@_test.c -L. -lft $(FLAGS)
 

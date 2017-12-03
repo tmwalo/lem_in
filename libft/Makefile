@@ -22,6 +22,7 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
       ft_itoa.c ft_putnbr.c ft_putnbr_fd.c ft_strsplit.c ft_strtok.c free_splitstr.c \
       ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
       ft_stack_init_ll.c ft_stack_check_empty_ll.c ft_push_ll.c ft_pop_ll.c ft_stack_size_ll.c \
+      get_next_line.c \
       llst_new.c llst_add.c llst_delone.c llst_del.c init_graph.c graph_add_edge.c \
 	  st_node_new.c st_node_delone.c st_put.c st_get.c st_contains.c st_size.c \
 	  ft_isnum.c ft_iscommand.c ft_iscomment.c ft_isvertex.c ft_isedge.c ft_not_empty.c \
@@ -37,6 +38,7 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
       ft_itoa.o ft_putnbr.o ft_putnbr_fd.o ft_strsplit.o ft_strtok.o free_splitstr.o \
       ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
       ft_stack_init_ll.o ft_stack_check_empty_ll.o ft_push_ll.o ft_pop_ll.o ft_stack_size_ll.o \
+      get_next_line.o \
       llst_new.o llst_add.o llst_delone.o llst_del.o init_graph.o graph_add_edge.o \
 	  st_node_new.o st_node_delone.o st_put.o st_get.o st_contains.o st_size.o \
 	  ft_isnum.o ft_iscommand.o ft_iscomment.o ft_isvertex.o ft_isedge.o ft_not_empty.o \
