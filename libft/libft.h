@@ -175,6 +175,7 @@ int			validate_graph_input(char *str);
 void			init_validators(graph_input **validator);
 int			validate_graph_file(t_llst *begin_ll);
 int			count_vertices(t_llst *begin_ll);
+void			*find_prev_cmd_target(t_llst *begin, void *value);
 
 
 #endif

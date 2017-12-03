@@ -218,3 +218,6 @@ validate_graph_file: validate_graph_file_test.c
 
 count_vertices: count_vertices_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+find_prev_cmd_target: find_prev_cmd_target_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
