@@ -165,4 +165,6 @@ int				ft_not_empty(char *str);
 
 void			init_symgraph(t_symgraph *pt_symgraph, int vertices, char *s, char *e);
 
+t_llst			*read_file(int fd);
+
 #endif

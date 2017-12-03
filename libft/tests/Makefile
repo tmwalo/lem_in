@@ -206,3 +206,6 @@ ft_not_empty: ft_not_empty_test.c
 
 init_symgraph: init_symgraph_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+read_file: read_file_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
