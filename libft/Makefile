@@ -28,7 +28,7 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
 	  ft_isnum.c ft_iscommand.c ft_iscomment.c ft_isvertex.c ft_isedge.c ft_not_empty.c \
 	  init_sgraph.c \
 	  read_file.c validate_graph_input.c init_validators.c validate_graph_file.c \
-	  count_vertices.c find_prev_cmd_target.c \
+	  count_vertices.c find_prev_cmd_target.c graph_src_size.c \
 
 OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_putendl_fd.o \
       ft_striter.o ft_striteri.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
@@ -46,7 +46,7 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
 	  ft_isnum.o ft_iscommand.o ft_iscomment.o ft_isvertex.o ft_isedge.o ft_not_empty.o \
 	  init_sgraph.o \
 	  read_file.o validate_graph_input.o init_validators.o validate_graph_file.o \
-	  count_vertices.o find_prev_cmd_target.o \
+	  count_vertices.o find_prev_cmd_target.o graph_src_size.o \
 
 FLAGS = -Wall -Wextra -Werror
 

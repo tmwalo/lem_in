@@ -221,3 +221,6 @@ count_vertices: count_vertices_test.c
 
 find_prev_cmd_target: find_prev_cmd_target_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+graph_src_size: graph_src_size_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
