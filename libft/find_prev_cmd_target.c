@@ -16,23 +16,27 @@ void	*find_prev_cmd_target(t_llst *begin, void *value)
 {
 	t_llst	*current;
 	t_llst	*prev;
+	t_llst	*cmd_target;
 	size_t	size;
+	int	matches;
 
 	if ((begin == NULL) || (value == NULL))
 		return (NULL);
+	cmd_target = NULL;
+	matches = 0;
 	current = begin;
 	prev = NULL;
 	while (current != NULL)
 	{
-		if (current != begin)
+		size = sizeof(char) * ft_strlen(value);
+		if (ft_memcmp(value, current->value, size) == 0)
 		{
-			size = sizeof(char) * ft_strlen(value);
-			if ((ft_memcmp(value, current->value, size) == 0) && prev)
-				return (prev->value);
-			if (!ft_iscomment((char *)current->value))
-				prev = current;
+			cmd_target = prev;
+			++matches;
 		}
+		if (!ft_iscomment((char *)current->value))
+			prev = current;
 		current = current->next;
 	}
-	return (NULL);
+	return ((cmd_target && (matches == 1)) ? cmd_target->value : NULL);
 }
