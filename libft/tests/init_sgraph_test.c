@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   graph_src_size.c                                   :+:      :+:    :+:   */
+/*   init_sgraph_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/04 14:27:20 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/04 14:27:37 by tmwalo           ###   ########.fr       */
+/*   Created: 2017/12/04 14:48:33 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/04 14:49:53 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	graph_src_size(t_llst *begin_ll)
+int	main(void)
 {
-	t_llst	*current_node;
-	int		ret;
+	t_sgraph	sgraph;
+	t_sgraph	*pt_sgraph;
 
-	current_node = begin_ll;
-	while (current_node != NULL)
-	{
-		ret = ft_isnum((char *)current_node->value);
-		if (ret)
-			return (ft_atoi((char *)current_node->value));
-		current_node = current_node->next;
-	}
+	pt_sgraph = &sgraph;
+
+	init_sgraph(pt_sgraph, 11, "three", "nine");
+
+	printf("%s\n", (pt_sgraph->st_begin == NULL) ? "PASS" : "FAIL");
+
+	printf("%s\n", (pt_sgraph->pt_graph) ? "PASS" : "FAIL");
+
+	printf("%s\n", (ft_strcmp(pt_sgraph->start, "three") == 0) ? "PASS" : "FAIL");
+
+	printf("%s\n", (ft_strcmp(pt_sgraph->end, "nine") == 0) ? "PASS" : "FAIL");
+
 	return (0);
 }

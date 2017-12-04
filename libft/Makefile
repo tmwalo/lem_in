@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/11/30 16:10:09 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/12/04 14:13:25 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
       llst_new.c llst_add.c llst_delone.c llst_del.c init_graph.c graph_add_edge.c \
 	  st_node_new.c st_node_delone.c st_put.c st_get.c st_contains.c st_size.c \
 	  ft_isnum.c ft_iscommand.c ft_iscomment.c ft_isvertex.c ft_isedge.c ft_not_empty.c \
-	  init_symgraph.c \
+	  init_sgraph.c \
 	  read_file.c validate_graph_input.c init_validators.c validate_graph_file.c \
 	  count_vertices.c find_prev_cmd_target.c \
 
@@ -44,7 +44,7 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
       llst_new.o llst_add.o llst_delone.o llst_del.o init_graph.o graph_add_edge.o \
 	  st_node_new.o st_node_delone.o st_put.o st_get.o st_contains.o st_size.o \
 	  ft_isnum.o ft_iscommand.o ft_iscomment.o ft_isvertex.o ft_isedge.o ft_not_empty.o \
-	  init_symgraph.o \
+	  init_sgraph.o \
 	  read_file.o validate_graph_input.o init_validators.o validate_graph_file.o \
 	  count_vertices.o find_prev_cmd_target.o \
 

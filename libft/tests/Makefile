@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/11/30 16:18:07 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/12/04 14:50:20 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -204,7 +204,7 @@ ft_isedge: ft_isedge_test.c
 ft_not_empty: ft_not_empty_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
-init_symgraph: init_symgraph_test.c
+init_sgraph: init_sgraph_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 read_file: read_file_test.c

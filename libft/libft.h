@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/30 16:11:31 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/04 14:10:28 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,21 +56,21 @@ typedef struct	s_graph
 
 typedef struct	s_st_node
 {
-	void	*key;
-	int	size_key;
-	void	*value;
-	int	size_value;
+	void		*key;
+	int			size_key;
+	void		*value;
+	int			size_value;
 }				t_st_node;
 
-typedef	struct	s_symgraph
+typedef	struct	s_sgraph
 {
 	t_llst		*st_begin;
 	char		**keys;
 	t_graph		*pt_graph;
-	int		num_ants;
+	int			num_ants;
 	char		*start;
 	char		*end;
-}		t_symgraph;
+}				t_sgraph;
 
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
@@ -141,7 +141,7 @@ int				ft_push_ll(t_stack_ll *stack, void const *content, size_t len);
 t_list			*ft_pop_ll(t_stack_ll *stack);
 size_t			ft_stack_size_ll(t_stack_ll *stack);
 
-int			get_next_line(const int fd, char **line);
+int				get_next_line(const int fd, char **line);
 
 t_llst			*llst_new(void *value, size_t size);
 void			llst_add(t_llst **alst, t_llst *new);
@@ -165,17 +165,16 @@ int				ft_isvertex(char *str);
 int				ft_isedge(char *str);
 int				ft_not_empty(char *str);
 
-void			init_symgraph(t_symgraph *pt_symgraph, int vertices, char *s, char *e);
+void			init_sgraph(t_sgraph *sgraph, int vertices, char *s, char *e);
 
 t_llst			*read_file(int fd);
 
-typedef int		(*graph_input)(char *);
+typedef int		(*t_graph_input)(char *);
 
-int			validate_graph_input(char *str);
-void			init_validators(graph_input **validator);
-int			validate_graph_file(t_llst *begin_ll);
-int			count_vertices(t_llst *begin_ll);
+int				validate_graph_input(char *str);
+void			init_validators(t_graph_input **validator);
+int				validate_graph_file(t_llst *begin_ll);
+int				count_vertices(t_llst *begin_ll);
 void			*find_prev_cmd_target(t_llst *begin, void *value);
-
 
 #endif

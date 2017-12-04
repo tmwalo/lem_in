@@ -1,26 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   find_prev_cmd_target.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/04 13:31:36 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/04 14:37:00 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*find_prev_cmd_target(t_llst *begin, void *value)
 {
-	t_llst 		*current_node;
-	t_llst 		*prev_node;
-	size_t		len;
+	t_llst	*current;
+	t_llst	*prev;
+	size_t	size;
 
 	if ((begin == NULL) || (value == NULL))
 		return (NULL);
-	current_node = begin;
-	prev_node = NULL;
-	while (current_node != NULL)
+	current = begin;
+	prev = NULL;
+	while (current != NULL)
 	{
-		if (current_node != begin)
+		if (current != begin)
 		{
-			len = ft_strlen(value);
-			if ((ft_memcmp(value, current_node->value, sizeof(char) * len) == 0) && prev_node)
-				return (prev_node->value);
-			if (!ft_iscomment((char *)current_node->value))
-				prev_node = current_node;
+			size = sizeof(char) * ft_strlen(value);
+			if ((ft_memcmp(value, current->value, size) == 0) && prev)
+				return (prev->value);
+			if (!ft_iscomment((char *)current->value))
+				prev = current;
 		}
-		current_node = current_node->next;
+		current = current->next;
 	}
 	return (NULL);
 }

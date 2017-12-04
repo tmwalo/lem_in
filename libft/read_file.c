@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_file.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/04 13:30:04 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/04 13:30:38 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 t_llst	*read_file(int fd)
 {
-	char	*line;
-	int	ret;
-	t_llst	*begin_ll;
-	t_llst	*new_node;
-	int	len;
+	char		*line;
+	int			ret;
+	t_llst		*begin_ll;
+	t_llst		*new_node;
+	int			len;
 
 	line = NULL;
 	begin_ll = NULL;

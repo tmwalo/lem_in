@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   st_put.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/04 14:22:50 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/04 14:23:16 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	st_put(t_llst **begin, char *key, int value)
 {
 	t_st_node	*pt_st_node;
 	t_llst		*new_node;
-	int		len;
+	int			len;
 
 	if ((begin == NULL) || (key == NULL) || (value <= 0))
 		return ;
