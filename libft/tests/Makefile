@@ -224,3 +224,6 @@ find_prev_cmd_target: find_prev_cmd_target_test.c
 
 graph_src_size: graph_src_size_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+sgraph_add_vertex: sgraph_add_vertex_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
