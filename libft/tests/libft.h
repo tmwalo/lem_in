@@ -178,5 +178,6 @@ int				count_vertices(t_llst *begin_ll);
 void			*find_prev_cmd_target(t_llst *begin, void *value);
 int			graph_src_size(t_llst *begin_ll);
 int			sgraph_add_vertex(t_sgraph *pt_sgraph, char *str);
+int			sgraph_add_vertices(t_llst *file, t_sgraph *pt_sgraph);
 
 #endif
