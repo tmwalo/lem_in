@@ -26,7 +26,9 @@ int	ft_isvertex(char *str)
 	while ((*tokens != '\0') && (num_tokens <= 4) && !error)
 	{
 		++num_tokens;
-		if ((num_tokens <= 3) && (!ft_isnum(*tokens)))
+		if ((num_tokens == 1) && (ft_iscommand(*tokens) || ft_iscomment(*tokens)))
+			error = 1;
+		if ((num_tokens >=2) && (num_tokens <= 3) && (!ft_isnum(*tokens)))
 			error = 1;
 		if ((num_tokens == 4) && (!ft_iscomment(*tokens)))
 			error = 1;
@@ -34,8 +36,5 @@ int	ft_isvertex(char *str)
 	}
 	tokens = tokens - num_tokens;
 	free_splitstr(&tokens);
-	if ((num_tokens <= 2) || error)
-		return (0);
-	else
-		return (VERTX);
+	return (((num_tokens <= 2) || error) ? 0 : VERTX);
 }
