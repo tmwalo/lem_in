@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_isedge(char *str)
 {
@@ -29,7 +28,7 @@ int	ft_isedge(char *str)
 	while ((*first_token_array != '\0') && !error)
 	{
 		++num_tokens;
-		if (!ft_isnum(*first_token_array) || (num_tokens > 2))
+		if (ft_iscommand(*first_token_array) || ft_iscomment(*first_token_array) || (num_tokens > 2))
 			error = 1;
 		++first_token_array;
 	}
