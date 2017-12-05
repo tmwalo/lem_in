@@ -14,6 +14,8 @@ int	main(void)
 	int		ret7;
 	t_llst		*current_node;
 	t_st_node	*st_node;
+	int		vertices;
+	int		index;
 
 	pt_sgraph = &sgraph;
 
@@ -27,14 +29,6 @@ int	main(void)
 	ret6 = sgraph_add_vertex(pt_sgraph, "11 54764 745");
 	ret7 = sgraph_add_vertex(pt_sgraph, "11 54764 745");
 
-	current_node = pt_sgraph->st_begin;
-	while (current_node)
-	{
-		st_node = (t_st_node *)current_node->value;
-		printf("key: %s, value: %d\n", (char *)(st_node->key), *(int *)(st_node->value));
-		current_node = current_node->next;
-	}
-
 	printf("%s\n", (ret1 == 0) ? "PASS" : "FAIL");
 	printf("%s\n", (ret2 == 0) ? "PASS" : "FAIL");
 	printf("%s\n", (ret3 == 0) ? "PASS" : "FAIL");
@@ -42,6 +36,22 @@ int	main(void)
 	printf("%s\n", (ret5 == 1) ? "PASS" : "FAIL");
 	printf("%s\n", (ret6 == 1) ? "PASS" : "FAIL");
 	printf("%s\n", (ret7 == 0) ? "PASS" : "FAIL");
+
+	current_node = pt_sgraph->st_begin;
+	while (current_node)
+	{
+		st_node = (t_st_node *)current_node->value;
+		printf("symbol table key: %s, value: %d\n", (char *)(st_node->key), *(int *)(st_node->value));
+		current_node = current_node->next;
+	}
+
+	vertices = 4;
+	index = 0;
+	while (index < vertices)
+	{
+		printf("keys array: index = %d, value: %s\n", index, (pt_sgraph->keys)[index]);
+		++index;
+	}
 
 	return (0);
 }
