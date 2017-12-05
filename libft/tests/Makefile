@@ -85,6 +85,7 @@ EXES = 	count_vertices \
 	validate_graph_input \
 	sgraph_add_vertex \
 	sgraph_add_vertices \
+	sgraph_add_edge \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -306,4 +307,7 @@ sgraph_add_vertex: sgraph_add_vertex_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 sgraph_add_vertices: sgraph_add_vertices_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+sgraph_add_edge: sgraph_add_edge_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
