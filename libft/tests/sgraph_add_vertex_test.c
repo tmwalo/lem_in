@@ -11,6 +11,7 @@ int	main(void)
 	int		ret4;
 	int		ret5;
 	int		ret6;
+	int		ret7;
 	t_llst		*current_node;
 	t_st_node	*st_node;
 
@@ -21,9 +22,10 @@ int	main(void)
 	ret1 = sgraph_add_vertex(pt_sgraph, NULL);
 	ret2 = sgraph_add_vertex(pt_sgraph, "");
 	ret3 = sgraph_add_vertex(pt_sgraph, "# comment");
-	ret4 = sgraph_add_vertex(pt_sgraph, "room125 343 676");
+	ret4 = sgraph_add_vertex(pt_sgraph, "125 343 676");
 	ret5 = sgraph_add_vertex(pt_sgraph, "room56 26 76437");
-	ret6 = sgraph_add_vertex(pt_sgraph, "room11 54764 745");
+	ret6 = sgraph_add_vertex(pt_sgraph, "11 54764 745");
+	ret7 = sgraph_add_vertex(pt_sgraph, "11 54764 745");
 
 	current_node = pt_sgraph->st_begin;
 	while (current_node)
@@ -39,6 +41,7 @@ int	main(void)
 	printf("%s\n", (ret4 == 1) ? "PASS" : "FAIL");
 	printf("%s\n", (ret5 == 1) ? "PASS" : "FAIL");
 	printf("%s\n", (ret6 == 1) ? "PASS" : "FAIL");
+	printf("%s\n", (ret7 == 0) ? "PASS" : "FAIL");
 
 	return (0);
 }

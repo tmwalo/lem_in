@@ -18,7 +18,7 @@ void	st_put(t_llst **begin, char *key, int value)
 	t_llst		*new_node;
 	int			len;
 
-	if ((begin == NULL) || (key == NULL) || (value <= 0))
+	if ((begin == NULL) || (key == NULL) || (value < 0))
 		return ;
 	len = (int)ft_strlen(key);
 	pt_st_node = st_node_new(key, len * sizeof(char), &value, sizeof(int));
