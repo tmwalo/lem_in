@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/12/04 14:50:20 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/12/06 16:34:41 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,6 +87,7 @@ EXES = 	count_vertices \
 	sgraph_add_vertices \
 	sgraph_add_edge \
 	graph_print \
+	sgraph_add_all_edges \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -314,4 +315,7 @@ sgraph_add_edge: sgraph_add_edge_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 graph_print: graph_print_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+sgraph_add_all_edges: sgraph_add_all_edges_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

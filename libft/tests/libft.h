@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/06 11:16:47 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/06 16:08:26 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,6 +180,7 @@ int				graph_src_size(t_llst *begin_ll);
 int				sgraph_add_vertex(t_sgraph *pt_sgraph, char *str);
 int				sgraph_add_vertices(t_llst *file, t_sgraph *pt_sgraph);
 int				sgraph_add_edge(t_sgraph *pt_sgraph, char *str);
+int				sgraph_add_all_edges(t_llst *file, t_sgraph *pt_sgraph);
 
 void			graph_print(t_graph *pt_graph);
 
