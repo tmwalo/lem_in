@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/04 14:10:28 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/06 11:16:47 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,10 +176,10 @@ void			init_validators(t_graph_input **validator);
 int				validate_graph_file(t_llst *begin_ll);
 int				count_vertices(t_llst *begin_ll);
 void			*find_prev_cmd_target(t_llst *begin, void *value);
-int			graph_src_size(t_llst *begin_ll);
-int			sgraph_add_vertex(t_sgraph *pt_sgraph, char *str);
-int			sgraph_add_vertices(t_llst *file, t_sgraph *pt_sgraph);
-int			sgraph_add_edge(t_sgraph *pt_sgraph, char *str);
+int				graph_src_size(t_llst *begin_ll);
+int				sgraph_add_vertex(t_sgraph *pt_sgraph, char *str);
+int				sgraph_add_vertices(t_llst *file, t_sgraph *pt_sgraph);
+int				sgraph_add_edge(t_sgraph *pt_sgraph, char *str);
 
 void			graph_print(t_graph *pt_graph);
 

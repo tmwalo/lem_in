@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sgraph_add_vertices.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/06 11:11:20 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/06 11:11:27 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	sgraph_add_vertices(t_llst *file, t_sgraph *pt_sgraph)
 {
 	t_llst	*current_node;
 	char	*line;
-	int	ret;
+	int		ret;
 
 	if ((file == NULL) || (pt_sgraph == NULL))
 		return (0);

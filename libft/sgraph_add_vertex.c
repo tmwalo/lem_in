@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sgraph_add_vertex.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/06 11:10:31 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/06 11:11:09 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	sgraph_add_vertex(t_sgraph *pt_sgraph, char *str)
 {
 	char	**tokens;
-	int	error;
-	int	key_index;
+	int		error;
+	int		key_index;
 
 	if (!pt_sgraph || !str || (ft_strlen(str) == 0) || !ft_isvertex(str))
 		return (0);

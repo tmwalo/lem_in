@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   graph_print.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/06 11:11:39 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/06 11:11:48 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	graph_print(t_graph *pt_graph)
 {
-	int	index;
+	int		index;
 	t_llst	*pt_begin;
 	t_llst	*current_node;
-	int	value;
+	int		value;
 
 	if (pt_graph == NULL)
 		return ;
