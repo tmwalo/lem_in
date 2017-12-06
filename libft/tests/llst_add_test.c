@@ -36,6 +36,8 @@ int	main(void)
 	}
 	else
 		printf("Fail\n");
+	
+	llst_del(&pt_begin);
 
 	return (0);
 }
