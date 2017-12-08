@@ -29,7 +29,7 @@ int		main(void)
 
 	ret = init_graph(pt_graph, -191);
 	if 	(ret == 0)
-		printf("Pass: vertices: %d, edges: %d, adj_lsts: %p\n", pt_graph->vertices, pt_graph->edges, pt_graph->adj_lsts);
+		printf("Pass\n");
 	else
 		printf("Fail\n");
 
