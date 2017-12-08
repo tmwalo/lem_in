@@ -182,6 +182,7 @@ int				sgraph_add_vertices(t_llst *file, t_sgraph *pt_sgraph);
 int				sgraph_add_edge(t_sgraph *pt_sgraph, char *str);
 int				sgraph_add_all_edges(t_llst *file, t_sgraph *pt_sgraph);
 
+void			print_edges(t_graph *pt_graph);
 void			graph_print(t_graph *pt_graph);
 
 #endif

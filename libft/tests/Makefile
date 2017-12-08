@@ -88,6 +88,7 @@ EXES = 	count_vertices \
 	sgraph_add_edge \
 	graph_print \
 	sgraph_add_all_edges \
+	print_edges \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -318,4 +319,7 @@ graph_print: graph_print_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 sgraph_add_all_edges: sgraph_add_all_edges_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+print_edges: print_edges_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
