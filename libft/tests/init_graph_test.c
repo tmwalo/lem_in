@@ -38,6 +38,8 @@ int		main(void)
 		printf("Pass: vertices: %d, edges: %d, adj_lsts: %p\n", pt_graph->vertices, pt_graph->edges, pt_graph->adj_lsts);
 	else
 		printf("Fail\n");
+	
+	free(pt_graph->adj_lsts);
 
 	return (0);
 }
