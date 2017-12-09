@@ -14,6 +14,8 @@
 
 void	graph_print(t_graph *pt_graph)
 {
+	if (pt_graph == NULL)
+		return ;
 	ft_putstr("Vertices: ");
 	ft_putnbr(pt_graph->vertices);
 	ft_putstr("\n");
