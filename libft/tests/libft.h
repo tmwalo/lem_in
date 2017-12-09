@@ -185,4 +185,6 @@ int				sgraph_add_all_edges(t_llst *file, t_sgraph *pt_sgraph);
 void			print_edges(t_graph *pt_graph);
 void			graph_print(t_graph *pt_graph);
 
+void			adj_lsts_destroy(t_graph *pt_graph);
+
 #endif
