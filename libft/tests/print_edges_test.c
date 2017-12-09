@@ -17,9 +17,6 @@ int		main(void)
 {
 	t_graph		graph;
 	t_graph		*pt_graph;
-	int			count;
-	t_llst		**adj_lsts;
-	t_llst		*list;
 
 	pt_graph = &graph;
 
@@ -30,20 +27,13 @@ int		main(void)
 	graph_add_edge(pt_graph, 3, 1);
 	graph_add_edge(pt_graph, 2, 3);
 
+	print_edges(NULL);
+
 	print_edges(pt_graph);
 
-	count = pt_graph->vertices;
-	adj_lsts = pt_graph->adj_lsts;
-	while (count > 0)
-	{
-		list = *adj_lsts;
-		llst_del(&list);
-		++adj_lsts;
-		--count;
-	}
+	adj_lsts_destroy(pt_graph);
 
-	adj_lsts = pt_graph->adj_lsts;
-	free(adj_lsts);
+	print_edges(pt_graph);
 
 	return (0);
 }

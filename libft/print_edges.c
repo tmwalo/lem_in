@@ -7,7 +7,7 @@ void	print_edges(t_graph *pt_graph)
 	t_llst	*current_node;
 	int		value;
 
-	if (pt_graph == NULL)
+	if ((pt_graph == NULL) || (pt_graph->adj_lsts == NULL))
 		return ;
 	index = 0;
 	while (index < pt_graph->vertices)
