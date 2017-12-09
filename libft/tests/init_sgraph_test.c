@@ -17,10 +17,24 @@ int	main(void)
 {
 	t_sgraph	sgraph;
 	t_sgraph	*pt_sgraph;
+	int		ret;
 
 	pt_sgraph = &sgraph;
 
-	init_sgraph(pt_sgraph, 11, "three", "nine");
+	ret = init_sgraph(NULL, 11, "three", "nine");
+	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
+
+	ret = init_sgraph(pt_sgraph, -98, "three", "nine");
+	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
+
+	ret = init_sgraph(pt_sgraph, 11, NULL, "nine");
+	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
+
+	ret = init_sgraph(pt_sgraph, 11, "three", NULL);
+	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
+
+	ret = init_sgraph(pt_sgraph, 11, "three", "nine");
+	printf("%s\n", (ret == 1) ? "PASS" : "FAIL");
 
 	printf("%s\n", (pt_sgraph->st_begin == NULL) ? "PASS" : "FAIL");
 

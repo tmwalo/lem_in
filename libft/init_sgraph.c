@@ -12,31 +12,29 @@
 
 #include "libft.h"
 
-void	init_sgraph(t_sgraph *sgraph, int vertices, char *s, char *e)
+int	init_sgraph(t_sgraph *sgraph, int vertices, char *s, char *e)
 {
-	char		**keys;
-	t_graph		*pt_graph;
-	int			array_size;
+	int	error;
+	int	ret;
 
+	error = 0;
 	if (!sgraph || (vertices <= 0) || !s || !e)
-		return ;
-	sgraph->st_begin = NULL;
-	keys = (char **)malloc(sizeof(char *) * vertices);
-	if (!keys)
-		return ;
-	array_size = vertices;
-	while (array_size > 0)
+		error = 1;
+	else
 	{
-		*keys = NULL;
-		++keys;
-		--array_size;
+		sgraph->st_begin = NULL;
+		sgraph->keys = (char **)ft_memalloc(sizeof(char *) * vertices);
+		sgraph->pt_graph = (t_graph *)ft_memalloc(sizeof(t_graph));
+		ret = init_graph(sgraph->pt_graph, vertices);
+		sgraph->start = ft_strdup(s);
+		sgraph->end = ft_strdup(e);
+		if ((sgraph->keys == NULL) || (sgraph->pt_graph == NULL) || (ret == 0))
+			error = 1;
+		if ((sgraph->start == NULL) || (sgraph->end == NULL))
+			error = 1;
 	}
-	sgraph->keys = keys;
-	pt_graph = (t_graph *)malloc(sizeof(t_graph));
-	if (!pt_graph)
-		return ;
-	init_graph(pt_graph, vertices);
-	sgraph->pt_graph = pt_graph;
-	sgraph->start = ft_strdup(s);
-	sgraph->end = ft_strdup(e);
+	if (error)
+		return (0);
+	else
+		return (1);
 }

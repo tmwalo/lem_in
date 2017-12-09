@@ -165,7 +165,7 @@ int				ft_isvertex(char *str);
 int				ft_isedge(char *str);
 int				ft_not_empty(char *str);
 
-void			init_sgraph(t_sgraph *sgraph, int vertices, char *s, char *e);
+int			init_sgraph(t_sgraph *sgraph, int vertices, char *s, char *e);
 
 t_llst			*read_file(int fd);
 
