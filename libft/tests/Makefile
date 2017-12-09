@@ -90,6 +90,7 @@ EXES = 	count_vertices \
 	sgraph_add_all_edges \
 	print_edges \
 	adj_lsts_destroy \
+	graph_destroy \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -326,4 +327,7 @@ print_edges: print_edges_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 adj_lsts_destroy: adj_lsts_destroy_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+graph_destroy: graph_destroy_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

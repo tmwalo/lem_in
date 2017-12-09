@@ -186,5 +186,6 @@ void			print_edges(t_graph *pt_graph);
 void			graph_print(t_graph *pt_graph);
 
 void			adj_lsts_destroy(t_graph *pt_graph);
+void			graph_destroy(t_graph **dbl_pt_graph);
 
 #endif
