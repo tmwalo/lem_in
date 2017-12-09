@@ -15,25 +15,14 @@
 int	init_graph(t_graph *pt_graph, int vertices)
 {
 	int		initialized;
-	t_llst	**adj_lsts;
 
 	initialized = 0;
 	if ((pt_graph != NULL) && (vertices > 0))
 	{
 		pt_graph->vertices = vertices;
 		pt_graph->edges = 0;
-		pt_graph->adj_lsts = (t_llst **)malloc(vertices * sizeof(t_llst *));
-		if (pt_graph->adj_lsts != NULL)
-		{
-			adj_lsts = pt_graph->adj_lsts;
-			while (vertices > 0)
-			{
-				*(adj_lsts) = NULL;
-				++(adj_lsts);
-				--vertices;
-			}
-			initialized = 1;
-		}
+		pt_graph->adj_lsts = (t_llst **)ft_memalloc(vertices * sizeof(t_llst *));
+		initialized = 1;
 	}
 	return (initialized);
 }
