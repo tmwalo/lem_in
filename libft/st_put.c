@@ -20,7 +20,7 @@ void	st_put(t_llst **begin, char *key, int value)
 
 	if ((begin == NULL) || (key == NULL) || (value < 0))
 		return ;
-	len = (int)ft_strlen(key);
+	len = (int)ft_strlen(key) + 1;
 	pt_st_node = st_node_new(key, len * sizeof(char), &value, sizeof(int));
 	if (pt_st_node == NULL)
 		return ;
