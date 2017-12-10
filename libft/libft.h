@@ -192,4 +192,6 @@ void			print_skeys(t_sgraph *pt_sgraph);
 void			print_st(t_llst *pt_st);
 void			sgraph_print(t_sgraph *pt_sgraph);
 
+void			st_destroy(t_llst **alst);
+
 #endif
