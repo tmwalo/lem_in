@@ -11,7 +11,8 @@ int	main(void)
 	key = ft_strdup("room17");
 	val = 187;
 	len = ft_strlen(key);
-	pt_st_node = st_node_new(key, len * sizeof(char), &val, sizeof(int));
+	pt_st_node = st_node_new(key, (len + 1) * sizeof(char), &val, sizeof(int));
+	free(key);
 
 	printf("Node values:");
 	printf(" key = %s", (char *)((pt_st_node->key) ) );
