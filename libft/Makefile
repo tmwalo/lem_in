@@ -31,6 +31,7 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
 	  count_vertices.c find_prev_cmd_target.c graph_src_size.c sgraph_add_vertex.c \
 	  sgraph_add_vertices.c sgraph_add_edge.c graph_print.c sgraph_add_all_edges.c \
 	  print_edges.c adj_lsts_destroy.c graph_destroy.c print_skeys.c print_st.c \
+	  sgraph_print.c \
 
 OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_putendl_fd.o \
       ft_striter.o ft_striteri.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
@@ -51,6 +52,7 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
 	  count_vertices.o find_prev_cmd_target.o graph_src_size.o sgraph_add_vertex.o \
 	  sgraph_add_vertices.o sgraph_add_edge.o graph_print.o sgraph_add_all_edges.o \
 	  print_edges.o adj_lsts_destroy.o graph_destroy.o print_skeys.o print_st.o \
+	  sgraph_print.o \
 
 FLAGS = -Wall -Wextra -Werror
 
