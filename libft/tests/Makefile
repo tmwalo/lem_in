@@ -92,6 +92,7 @@ EXES = 	count_vertices \
 	adj_lsts_destroy \
 	graph_destroy \
 	print_skeys \
+	print_st \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -334,4 +335,7 @@ graph_destroy: graph_destroy_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 print_skeys: print_skeys_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+print_st: print_st_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
