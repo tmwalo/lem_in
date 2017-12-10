@@ -27,5 +27,7 @@ void	st_put(t_llst **begin, char *key, int value)
 	new_node = llst_new(pt_st_node, sizeof(t_st_node));
 	if (new_node == NULL)
 		return ;
+	ft_memdel((void **)&(new_node->value));
+	new_node->value = pt_st_node;
 	llst_add(begin, new_node);
 }
