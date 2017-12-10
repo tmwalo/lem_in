@@ -3,10 +3,9 @@
 
 int	main(void)
 {
-	t_sgraph	sgraph;
 	t_sgraph	*pt_sgraph;
 
-	pt_sgraph = &sgraph;
+	pt_sgraph = (t_sgraph *)ft_memalloc(sizeof(t_sgraph));
 
 	init_sgraph(pt_sgraph, 11, "three", "nine");
 
@@ -19,6 +18,8 @@ int	main(void)
 	skeys_destroy(pt_sgraph);
 
 	print_skeys(pt_sgraph);
+
+	sgraph_destroy(&pt_sgraph);
 
 	return (0);
 }
