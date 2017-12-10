@@ -16,7 +16,7 @@ int	main(void)
 	ret = sgraph_add_all_edges(file, pt_sgraph);
 	printf("%s\n", (ret) ? "PASS" : "FAIL");
 
-	graph_print(pt_sgraph->pt_graph);
+	sgraph_print(pt_sgraph);
 
 	llst_del(&file);
 	return (0);
