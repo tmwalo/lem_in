@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 14:03:09 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/30 15:59:27 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/11 12:09:02 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,26 @@
 int	ft_isvertex(char *str)
 {
 	char	**tokens;
-	int		num_tokens;
+	int		ntokens;
 	int		error;
 
 	if ((str == NULL) || (ft_strlen(str) == 0))
 		return (0);
 	tokens = ft_strtok(str);
 	error = 0;
-	num_tokens = 0;
-	while ((*tokens != '\0') && (num_tokens <= 4) && !error)
+	ntokens = 0;
+	while ((*tokens != '\0') && (ntokens <= 4) && !error)
 	{
-		++num_tokens;
-		if ((num_tokens == 1) && (ft_iscommand(*tokens) || ft_iscomment(*tokens)))
+		++ntokens;
+		if ((ntokens == 1) && (ft_iscommand(*tokens) || ft_iscomment(*tokens)))
 			error = 1;
-		if ((num_tokens >=2) && (num_tokens <= 3) && (!ft_isnum(*tokens)))
+		if ((ntokens >= 2) && (ntokens <= 3) && (!ft_isnum(*tokens)))
 			error = 1;
-		if ((num_tokens == 4) && (!ft_iscomment(*tokens)))
+		if ((ntokens == 4) && (!ft_iscomment(*tokens)))
 			error = 1;
 		++tokens;
 	}
-	tokens = tokens - num_tokens;
+	tokens = tokens - ntokens;
 	free_splitstr(&tokens);
-	return (((num_tokens <= 2) || error) ? 0 : VERTX);
+	return (((ntokens <= 2) || error) ? 0 : VERTX);
 }

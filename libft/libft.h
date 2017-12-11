@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/06 16:08:26 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/11 12:17:51 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,7 +148,7 @@ void			llst_add(t_llst **alst, t_llst *new);
 void			llst_delone(t_llst **alst);
 void			llst_del(t_llst **alst);
 
-int				init_graph(t_graph *pt_graph, int vertices);
+int				init_graph(t_graph *graph, int vertices);
 void			graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b);
 
 t_st_node		*st_node_new(void *key, int size_k, void *value, int size_v);
@@ -165,7 +165,7 @@ int				ft_isvertex(char *str);
 int				ft_isedge(char *str);
 int				ft_not_empty(char *str);
 
-int			init_sgraph(t_sgraph *sgraph, int vertices, char *s, char *e);
+int				init_sgraph(t_sgraph *sgraph, int vertices, char *s, char *e);
 
 t_llst			*read_file(int fd);
 

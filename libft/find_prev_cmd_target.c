@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 13:31:36 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/04 14:37:00 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/11 11:54:00 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*find_prev_cmd_target(t_llst *begin, void *value)
 	t_llst	*prev;
 	t_llst	*cmd_target;
 	size_t	size;
-	int	matches;
+	int		matches;
 
 	if ((begin == NULL) || (value == NULL))
 		return (NULL);

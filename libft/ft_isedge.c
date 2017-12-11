@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 14:03:17 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/30 17:46:02 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/11 12:04:36 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,27 @@
 int	ft_isedge(char *str)
 {
 	char	**tokens;
-	char	**first_token_array;
-	int		num_tokens;
+	char	**token1;
+	int		ntokens;
 	int		error;
 
 	if ((str == NULL) || (ft_strlen(str) == 0))
 		return (0);
 	tokens = ft_strtok(str);
 	error = 0;
-	first_token_array = ft_strsplit(*tokens, '-');
-	num_tokens = 0;
-	while ((*first_token_array != '\0') && !error)
+	token1 = ft_strsplit(*tokens, '-');
+	ntokens = 0;
+	while ((*token1 != '\0') && !error)
 	{
-		++num_tokens;
-		if (ft_iscommand(*first_token_array) || ft_iscomment(*first_token_array) || (num_tokens > 2))
+		++ntokens;
+		if (ft_iscommand(*token1) || ft_iscomment(*token1) || (ntokens > 2))
 			error = 1;
-		++first_token_array;
+		++token1;
 	}
-	if ((num_tokens > 0) && !ft_iscomment(tokens[1]) && (tokens[1] != '\0'))
+	if ((ntokens > 0) && !ft_iscomment(tokens[1]) && (tokens[1] != '\0'))
 		error = 1;
-	first_token_array = first_token_array - num_tokens;
-	free_splitstr(&first_token_array);
+	token1 = token1 - ntokens;
+	free_splitstr(&token1);
 	free_splitstr(&tokens);
-	return (((num_tokens <= 1) || error) ? 0 : EDGE);
+	return (((ntokens <= 1) || error) ? 0 : EDGE);
 }
