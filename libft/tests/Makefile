@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/12/06 16:34:41 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/12/11 15:18:03 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,6 +97,7 @@ EXES = 	count_vertices \
 	st_destroy \
 	skeys_destroy \
 	sgraph_destroy \
+	sgraph_build \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -354,4 +355,7 @@ skeys_destroy: skeys_destroy_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 sgraph_destroy: sgraph_destroy_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+sgraph_build: sgraph_build_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

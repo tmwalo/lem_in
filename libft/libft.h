@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/11 12:17:51 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/11 14:59:19 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,5 +195,7 @@ void			sgraph_print(t_sgraph *pt_sgraph);
 void			st_destroy(t_llst **alst);
 void			skeys_destroy(t_sgraph *pt_sgraph);
 void			sgraph_destroy(t_sgraph **dbl_pt_sgraph);
+
+t_sgraph		*sgraph_build(t_llst *file);
 
 #endif
