@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 13:30:04 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/04 13:30:38 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/11 11:39:37 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ t_llst	*read_file(int fd)
 			llst_add(&begin_ll, new_node);
 		ft_memdel((void **)&line);
 	}
+	ft_memdel((void **)&line);
 	if (ret == (-1))
 	{
-		if (begin_ll != NULL)
-			llst_del(&begin_ll);
+		llst_del(&begin_ll);
 		return (NULL);
 	}
 	return (begin_ll);

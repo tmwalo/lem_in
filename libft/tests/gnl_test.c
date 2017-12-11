@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/16 11:34:28 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/06/26 12:15:49 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/11 11:32:34 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		main(void)
 			printf("%s\n", line);
 			free(line);
 		}
+		free(line);
 		close(fd);
 		if (ret == 0)
 			printf("End of file has been reached.\n");
