@@ -98,6 +98,7 @@ EXES = 	count_vertices \
 	skeys_destroy \
 	sgraph_destroy \
 	sgraph_build \
+	first_token \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -358,4 +359,7 @@ sgraph_destroy: sgraph_destroy_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 sgraph_build: sgraph_build_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+first_token: first_token_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

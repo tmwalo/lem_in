@@ -198,4 +198,6 @@ void			sgraph_destroy(t_sgraph **dbl_pt_sgraph);
 
 t_sgraph		*sgraph_build(t_llst *file);
 
+char			*first_token(char *str);
+
 #endif
