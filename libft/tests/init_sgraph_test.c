@@ -15,11 +15,10 @@
 
 int	main(void)
 {
-	t_sgraph	sgraph;
 	t_sgraph	*pt_sgraph;
 	int		ret;
 
-	pt_sgraph = &sgraph;
+	pt_sgraph = (t_sgraph *)ft_memalloc(sizeof(t_sgraph));
 
 	ret = init_sgraph(NULL, 11, "three", "nine");
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
@@ -43,6 +42,8 @@ int	main(void)
 	printf("%s\n", (ft_strcmp(pt_sgraph->start, "three") == 0) ? "PASS" : "FAIL");
 
 	printf("%s\n", (ft_strcmp(pt_sgraph->end, "nine") == 0) ? "PASS" : "FAIL");
+
+	sgraph_destroy(&pt_sgraph);
 
 	return (0);
 }
