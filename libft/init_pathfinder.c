@@ -17,5 +17,6 @@ int	init_pathfinder(t_pathfinder *pt_map, t_sgraph *pt_sgraph)
 		return (0);
 	}
 	pt_map->pt_sgraph = pt_sgraph;
+	pt_map->paths = NULL;
 	return (1);
 }

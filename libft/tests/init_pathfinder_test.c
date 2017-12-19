@@ -25,6 +25,8 @@ int	main(void)
 
 	printf("%s\n", (pt_map->edge_to) ? "PASS" : "FAIL");
 
+	printf("%s\n", (pt_map->paths == NULL) ? "PASS" : "FAIL");
+
 	sgraph_destroy(&pt_sgraph);
 	llst_del(&file);
 	return (0);
