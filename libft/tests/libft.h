@@ -210,5 +210,8 @@ char			*first_token(char *str);
 
 int			init_pathfinder(t_pathfinder *pt_map, t_sgraph *pt_sgraph);
 t_llst			*path_to(t_pathfinder *pt_map, int vertex);
+void			all_paths(t_pathfinder *pt_map, int curr_vtx, int end);
+t_llst			*llst_new_empty(void);
+int			path_store(t_pathfinder *pt_map, int end);
 
 #endif

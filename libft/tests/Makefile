@@ -101,6 +101,7 @@ EXES = 	count_vertices \
 	first_token \
 	init_pathfinder \
 	path_to \
+	all_paths \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -369,5 +370,8 @@ first_token: first_token_test.c
 init_pathfinder: init_pathfinder_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
-path_to:path_to_test.c
+path_to: path_to_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+all_paths: all_paths_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
