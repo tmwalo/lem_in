@@ -72,6 +72,14 @@ typedef	struct	s_sgraph
 	char		*end;
 }				t_sgraph;
 
+typedef struct	s_pathfinder
+{
+	int		*visited;
+	int		*edge_to;
+	t_llst		*paths;
+	t_sgraph	*pt_sgraph;
+}		t_pathfinder;
+
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -199,5 +207,7 @@ void			sgraph_destroy(t_sgraph **dbl_pt_sgraph);
 t_sgraph		*sgraph_build(t_llst *file);
 
 char			*first_token(char *str);
+
+int			init_pathfinder(t_pathfinder *pt_map, t_sgraph *pt_sgraph);
 
 #endif
