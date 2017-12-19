@@ -100,6 +100,7 @@ EXES = 	count_vertices \
 	sgraph_build \
 	first_token \
 	init_pathfinder \
+	path_to \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -366,4 +367,7 @@ first_token: first_token_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 init_pathfinder: init_pathfinder_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+path_to:path_to_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

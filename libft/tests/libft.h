@@ -209,5 +209,6 @@ t_sgraph		*sgraph_build(t_llst *file);
 char			*first_token(char *str);
 
 int			init_pathfinder(t_pathfinder *pt_map, t_sgraph *pt_sgraph);
+t_llst			*path_to(t_pathfinder *pt_map, int vertex);
 
 #endif
