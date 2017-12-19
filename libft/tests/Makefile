@@ -102,6 +102,7 @@ EXES = 	count_vertices \
 	init_pathfinder \
 	path_to \
 	all_paths \
+	pathfinder_destroy \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -374,4 +375,7 @@ path_to: path_to_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 all_paths: all_paths_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+pathfinder_destroy: pathfinder_destroy_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

@@ -213,5 +213,6 @@ t_llst			*path_to(t_pathfinder *pt_map, int vertex);
 void			all_paths(t_pathfinder *pt_map, int curr_vtx, int end);
 t_llst			*llst_new_empty(void);
 int			path_store(t_pathfinder *pt_map, int end);
+void			pathfinder_destroy(t_pathfinder **pt_map);
 
 #endif
