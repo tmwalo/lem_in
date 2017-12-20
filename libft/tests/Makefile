@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/12/20 12:17:41 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/12/20 13:33:18 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,6 +104,7 @@ EXES = 	count_vertices \
 	all_paths \
 	pathfinder_destroy \
 	llst_len \
+	paths_cross \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -381,5 +382,8 @@ all_paths: all_paths_test.c
 pathfinder_destroy: pathfinder_destroy_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
-llst_len:llst_len_test.c
+llst_len: llst_len_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+paths_cross: paths_cross_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
