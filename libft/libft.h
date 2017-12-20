@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/11 14:59:19 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/20 11:40:12 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,11 @@ typedef	struct	s_sgraph
 
 typedef struct	s_pathfinder
 {
-	int		*visited;
-	int		*edge_to;
+	int			*visited;
+	int			*edge_to;
 	t_llst		*paths;
 	t_sgraph	*pt_sgraph;
-}		t_pathfinder;
+}				t_pathfinder;
 
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
@@ -208,11 +208,11 @@ t_sgraph		*sgraph_build(t_llst *file);
 
 char			*first_token(char *str);
 
-int			init_pathfinder(t_pathfinder *pt_map, t_sgraph *pt_sgraph);
+int				init_pathfinder(t_pathfinder *pt_map, t_sgraph *pt_sgraph);
 t_llst			*path_to(t_pathfinder *pt_map, int vertex);
 void			all_paths(t_pathfinder *pt_map, int curr_vtx, int end);
 t_llst			*llst_new_empty(void);
-int			path_store(t_pathfinder *pt_map, int end);
+int				path_store(t_pathfinder *pt_map, int end);
 void			pathfinder_destroy(t_pathfinder **pt_map);
 
 #endif

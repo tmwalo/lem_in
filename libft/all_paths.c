@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   all_paths.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/20 11:35:06 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/20 11:35:22 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	all_paths(t_pathfinder *pt_map, int curr_vtx, int end)
 {
-	t_llst		*curr_node;
+	t_llst	*curr_node;
 	int		next_vertex;
 
 	if ((pt_map == NULL) || (curr_vtx < 0))

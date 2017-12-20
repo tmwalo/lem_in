@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_pathfinder.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/20 11:38:14 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/20 11:38:26 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	init_pathfinder(t_pathfinder *pt_map, t_sgraph *pt_sgraph)
 {
-	int	vertices;
+	int		vertices;
 
 	if ((pt_map == NULL) || (pt_sgraph == NULL))
 		return (0);

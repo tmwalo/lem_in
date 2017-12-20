@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pathfinder_destroy.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/20 11:41:29 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/20 11:43:08 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	pathfinder_destroy(t_pathfinder **pt_map)
@@ -10,7 +22,7 @@ void	pathfinder_destroy(t_pathfinder **pt_map)
 	ft_memdel((void **)&((*pt_map)->edge_to));
 	sgraph_destroy(&((*pt_map)->pt_sgraph));
 	paths_copy = (*pt_map)->paths;
-	while((*pt_map)->paths != NULL)
+	while ((*pt_map)->paths != NULL)
 	{
 		llst_del((t_llst **)&((*pt_map)->paths->value));
 		(*pt_map)->paths = (*pt_map)->paths->next;
