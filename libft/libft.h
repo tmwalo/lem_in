@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/20 11:40:12 by tmwalo           ###   ########.fr       */
+/*   Updated: 2017/12/20 12:04:02 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -214,5 +214,6 @@ void			all_paths(t_pathfinder *pt_map, int curr_vtx, int end);
 t_llst			*llst_new_empty(void);
 int				path_store(t_pathfinder *pt_map, int end);
 void			pathfinder_destroy(t_pathfinder **pt_map);
+int				llst_len(t_llst *begin);
 
 #endif

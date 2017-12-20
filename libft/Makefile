@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/12/11 15:00:10 by tmwalo           ###   ########.fr        #
+#    Updated: 2017/12/20 12:04:33 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
 	  print_edges.c adj_lsts_destroy.c graph_destroy.c print_skeys.c print_st.c \
 	  sgraph_print.c st_destroy.c skeys_destroy.c sgraph_destroy.c \
 	  sgraph_build.c first_token.c init_pathfinder.c path_to.c all_paths.c \
-	  llst_new_empty.c path_store.c pathfinder_destroy.c \
+	  llst_new_empty.c path_store.c pathfinder_destroy.c llst_len.c \
 
 OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_putendl_fd.o \
       ft_striter.o ft_striteri.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
@@ -56,7 +56,7 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
 	  print_edges.o adj_lsts_destroy.o graph_destroy.o print_skeys.o print_st.o \
 	  sgraph_print.o st_destroy.o skeys_destroy.o sgraph_destroy.o \
 	  sgraph_build.o first_token.o init_pathfinder.o path_to.o all_paths.o \
-	  llst_new_empty.o path_store.o pathfinder_destroy.o \
+	  llst_new_empty.o path_store.o pathfinder_destroy.o llst_len.o \
 
 FLAGS = -Wall -Wextra -Werror
 
