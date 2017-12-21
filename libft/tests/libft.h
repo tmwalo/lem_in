@@ -216,5 +216,6 @@ int				path_store(t_pathfinder *pt_map, int end);
 void			pathfinder_destroy(t_pathfinder **pt_map);
 int				llst_len(t_llst *begin);
 int				paths_cross(t_llst *path_x, t_llst *path_y, int start, int end);
+int			store_unviable_path(t_llst **pt_begin, t_llst *path_x, t_llst *path_y);
 
 #endif

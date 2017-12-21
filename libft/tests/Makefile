@@ -105,6 +105,7 @@ EXES = 	count_vertices \
 	pathfinder_destroy \
 	llst_len \
 	paths_cross \
+	store_unviable_path \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -386,4 +387,7 @@ llst_len: llst_len_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 paths_cross: paths_cross_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+store_unviable_path: store_unviable_path_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
