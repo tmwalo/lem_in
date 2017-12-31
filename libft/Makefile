@@ -34,7 +34,7 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
 	  sgraph_print.c st_destroy.c skeys_destroy.c sgraph_destroy.c \
 	  sgraph_build.c first_token.c init_pathfinder.c path_to.c all_paths.c \
 	  llst_new_empty.c path_store.c pathfinder_destroy.c llst_len.c paths_cross.c \
-	  store_unviable_path.c unviable_paths.c path_search.c \
+	  store_unviable_path.c unviable_paths.c path_search.c viable_paths.c \
 
 OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_putendl_fd.o \
       ft_striter.o ft_striteri.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
@@ -58,7 +58,7 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
 	  sgraph_print.o st_destroy.o skeys_destroy.o sgraph_destroy.o \
 	  sgraph_build.o first_token.o init_pathfinder.o path_to.o all_paths.o \
 	  llst_new_empty.o path_store.o pathfinder_destroy.o llst_len.o paths_cross.o \
-	  store_unviable_path.o unviable_paths.o path_search.o \
+	  store_unviable_path.o unviable_paths.o path_search.o viable_paths.o \
 
 FLAGS = -Wall -Wextra -Werror
 

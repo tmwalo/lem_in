@@ -219,5 +219,6 @@ int				paths_cross(t_llst *path_x, t_llst *path_y, int start, int end);
 int			store_unviable_path(t_llst **pt_begin, t_llst *path_x, t_llst *path_y);
 t_llst			*unviable_paths(t_llst *paths, int start, int end);
 int			path_search(t_llst *search_path, t_llst *paths);
+int			viable_paths(t_llst *paths, int start, int end);
 
 #endif

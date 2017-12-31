@@ -108,6 +108,7 @@ EXES = 	count_vertices \
 	store_unviable_path \
 	unviable_paths \
 	path_search \
+	viable_paths \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -398,4 +399,7 @@ unviable_paths: unviable_paths_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 path_search: path_search_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+viable_paths: viable_paths_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
