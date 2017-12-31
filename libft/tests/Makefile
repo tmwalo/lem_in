@@ -106,6 +106,8 @@ EXES = 	count_vertices \
 	llst_len \
 	paths_cross \
 	store_unviable_path \
+	unviable_paths \
+	path_search \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -390,4 +392,10 @@ paths_cross: paths_cross_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 store_unviable_path: store_unviable_path_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+unviable_paths: unviable_paths_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+path_search: path_search_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
