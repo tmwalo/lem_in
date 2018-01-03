@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2017/12/20 13:33:18 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/01/03 12:29:03 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -109,6 +109,7 @@ EXES = 	count_vertices \
 	unviable_paths \
 	path_search \
 	viable_paths \
+	paths_destroy \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -402,4 +403,7 @@ path_search: path_search_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 viable_paths: viable_paths_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+paths_destroy: paths_destroy_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

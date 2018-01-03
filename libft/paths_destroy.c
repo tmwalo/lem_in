@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   store_unviable_path.c                              :+:      :+:    :+:   */
+/*   paths_destroy.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/03 11:37:54 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/03 11:37:56 by tmwalo           ###   ########.fr       */
+/*   Created: 2018/01/03 11:51:29 by tmwalo            #+#    #+#             */
+/*   Updated: 2018/01/03 12:24:14 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	store_unviable_path(t_llst **pt_begin, t_llst *path_x, t_llst *path_y)
+void	paths_destroy(t_llst **paths)
 {
-	t_llst	*new_node;
-
-	if (!pt_begin || !path_x || !path_y)
-		return (0);
-	new_node = llst_new_empty();
-	if (new_node == NULL)
+	if (paths == NULL)
+		return ;
+	while (*paths != NULL)
 	{
-		llst_del(pt_begin);
-		return (0);
+		llst_del((t_llst **)(&((*paths)->value)));
+		*paths = (*paths)->next;
 	}
-	if (llst_len(path_x) <= llst_len(path_y))
-		new_node->value = path_y;
-	else
-		new_node->value = path_x;
-	llst_add(pt_begin, new_node);
-	return (1);
+	llst_del(paths);
 }

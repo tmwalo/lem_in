@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   viable_paths_test.c                                :+:      :+:    :+:   */
+/*   paths_destroy_test.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/03 13:11:28 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/03 13:12:03 by tmwalo           ###   ########.fr       */
+/*   Created: 2018/01/03 12:25:02 by tmwalo            #+#    #+#             */
+/*   Updated: 2018/01/03 12:27:57 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	main(void)
 	start = *(int *)st_get(pt_map->pt_sgraph->st_begin, pt_map->pt_sgraph->start);
 	end = *(int *)st_get(pt_map->pt_sgraph->st_begin, pt_map->pt_sgraph->end);
 	all_paths(pt_map, start, end);
-	viable_paths(&(pt_map->paths), start, end);
 	current_node = pt_map->paths;
 	while (current_node != NULL)
 	{
@@ -39,10 +38,25 @@ int	main(void)
 		current_node_path = (t_llst *)current_node->value;
 		while (current_node_path != NULL)
 		{
-			if (current_node_path->value != NULL)
-				printf(" %s", (pt_map->pt_sgraph->keys)[*(int *)(current_node_path->value)]);
-			else
-				printf("Deleted unviable path\n");
+			printf(" %s", (pt_map->pt_sgraph->keys)[*(int *)(current_node_path->value)]);
+			current_node_path = current_node_path->next;
+		}
+		printf("\n");
+		current_node = current_node->next;
+	}
+
+	paths_destroy(&(pt_map->paths));
+
+	printf("Print paths after call to paths_destroy()\n");
+
+	current_node = pt_map->paths;
+	while (current_node != NULL)
+	{
+		printf("path:");
+		current_node_path = (t_llst *)current_node->value;
+		while (current_node_path != NULL)
+		{
+			printf(" %s", (pt_map->pt_sgraph->keys)[*(int *)(current_node_path->value)]);
 			current_node_path = current_node_path->next;
 		}
 		printf("\n");

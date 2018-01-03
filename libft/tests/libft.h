@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/20 13:05:59 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/03 13:17:46 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -216,9 +216,10 @@ int				path_store(t_pathfinder *pt_map, int end);
 void			pathfinder_destroy(t_pathfinder **pt_map);
 int				llst_len(t_llst *begin);
 int				paths_cross(t_llst *path_x, t_llst *path_y, int start, int end);
-int			store_unviable_path(t_llst **pt_begin, t_llst *path_x, t_llst *path_y);
+int				store_unviable_path(t_llst **pt_begin, t_llst *path_x, t_llst *path_y);
 t_llst			*unviable_paths(t_llst *paths, int start, int end);
-int			path_search(t_llst *search_path, t_llst *paths);
-int			viable_paths(t_llst *paths, int start, int end);
+int				path_search(t_llst *search_path, t_llst *paths);
+void			viable_paths(t_llst **paths, int start, int end);
+void			paths_destroy(t_llst **paths);
 
 #endif
