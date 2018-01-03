@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	unviable_path(t_llst **begin, t_llst *path_x, t_llst *path_y)
+int	unviable_path(t_llst **begin, void *path_x, void *path_y)
 {
 	t_llst	*new_node;
 
@@ -24,7 +24,7 @@ int	unviable_path(t_llst **begin, t_llst *path_x, t_llst *path_y)
 		llst_del(begin);
 		return (0);
 	}
-	if (llst_len(path_x) <= llst_len(path_y))
+	if (llst_len((t_llst *)path_x) <= llst_len((t_llst *)path_y))
 		new_node->value = path_y;
 	else
 		new_node->value = path_x;

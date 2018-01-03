@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		paths_cross(t_llst *path_x, t_llst *path_y, int start, int end)
+int		paths_cross(void *path_x, void *path_y, int start, int end)
 {
 	t_llst	*curr_node_x;
 	t_llst	*curr_node_y;
@@ -21,10 +21,10 @@ int		paths_cross(t_llst *path_x, t_llst *path_y, int start, int end)
 
 	if ((path_x == NULL) || (path_y == NULL) || (start < 0) || (end < 0))
 		return (0);
-	curr_node_x = path_x;
+	curr_node_x = (t_llst *)path_x;
 	while (curr_node_x != NULL)
 	{
-		curr_node_y = path_y;
+		curr_node_y = (t_llst *)path_y;
 		while (curr_node_y != NULL)
 		{
 			vtx_x = *(int *)curr_node_x->value;
