@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2018/01/03 12:29:03 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/01/03 14:49:04 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -105,7 +105,7 @@ EXES = 	count_vertices \
 	pathfinder_destroy \
 	llst_len \
 	paths_cross \
-	store_unviable_path \
+	unviable_path \
 	unviable_paths \
 	path_search \
 	viable_paths \
@@ -393,7 +393,7 @@ llst_len: llst_len_test.c
 paths_cross: paths_cross_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
-store_unviable_path: store_unviable_path_test.c
+unviable_path: unviable_path_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 unviable_paths: unviable_paths_test.c

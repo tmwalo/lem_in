@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 11:38:29 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/03 11:38:41 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/03 14:47:33 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_llst	*unviable_paths(t_llst *paths, int start, int end)
 			{
 				if (paths_cross((t_llst *)cmp_path->value, (t_llst *)curr_path->value, start, end))
 				{
-					if (!store_unviable_path(&unviable_paths, (t_llst *)cmp_path->value, (t_llst *)curr_path->value))
+					if (!unviable_path(&unviable_paths, (t_llst *)cmp_path->value, (t_llst *)curr_path->value))
 						return (NULL);
 				}
 			}

@@ -10,7 +10,7 @@ int	main(void)
 	int				end;
 	t_llst			*current_node;
 	t_llst			*paths;
-	t_llst			*unviable_path;
+	t_llst			*pt_unviable_path;
 
 	file = read_file(0);
 	pt_sgraph = sgraph_build(file);
@@ -20,10 +20,10 @@ int	main(void)
 	start = *(int *)st_get(pt_map->pt_sgraph->st_begin, pt_map->pt_sgraph->start);
 	end = *(int *)st_get(pt_map->pt_sgraph->st_begin, pt_map->pt_sgraph->end);
 	all_paths(pt_map, start, end);
-	unviable_path = NULL;
+	pt_unviable_path = NULL;
 	paths = pt_map->paths;
-	store_unviable_path(&unviable_path, paths->value, paths->next->value);
-	current_node = unviable_path->value;
+	unviable_path(&pt_unviable_path, paths->value, paths->next->value);
+	current_node = pt_unviable_path->value;
 	printf("unviable path:");
 	while (current_node != NULL)
 	{
