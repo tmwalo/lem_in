@@ -222,5 +222,6 @@ int				path_search(t_llst *search_path, t_llst *paths);
 void			viable_paths(t_llst **paths, int start, int end);
 void			paths_destroy(t_llst **paths);
 int			store_path(t_llst **all_paths, t_llst *path);
+int			is_viable(t_llst *path, t_llst *unviable_paths);
 
 #endif
