@@ -110,6 +110,7 @@ EXES = 	count_vertices \
 	path_search \
 	viable_paths \
 	paths_destroy \
+	store_path \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -406,4 +407,7 @@ viable_paths: viable_paths_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 paths_destroy: paths_destroy_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+store_path: store_path_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
