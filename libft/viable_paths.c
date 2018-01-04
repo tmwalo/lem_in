@@ -25,7 +25,7 @@ void	viable_paths(t_llst **paths, int start, int end)
 	pt_viable_paths = NULL;
 	while (*paths != NULL)
 	{
-		if (is_viable(*paths, pt_unviable_paths))
+		if (is_viable((*paths)->value, pt_unviable_paths))
 		{
 			if (!store_path(&pt_viable_paths, (*paths)->value))
 			{
