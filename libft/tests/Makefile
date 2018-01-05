@@ -113,6 +113,7 @@ EXES = 	count_vertices \
 	store_path \
 	is_viable \
 	init_occupied \
+	init_ants \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -418,4 +419,7 @@ is_viable: is_viable_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 init_occupied: init_occupied_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+init_ants: init_ants_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
