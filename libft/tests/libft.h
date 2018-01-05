@@ -80,6 +80,13 @@ typedef struct	s_pathfinder
 	t_sgraph	*pt_sgraph;
 }				t_pathfinder;
 
+typedef struct	s_ant
+{
+	t_llst	*path;
+	t_llst	*current_room;
+	int	arrived;
+}		t_ant;
+
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -223,5 +230,7 @@ void			viable_paths(t_llst **paths, int start, int end);
 void			paths_destroy(t_llst **paths);
 int			store_path(t_llst **all_paths, t_llst *path);
 int			is_viable(t_llst *path, t_llst *unviable_paths);
+
+void			init_occupied(t_sgraph *pt_sgraph, int *occupied);
 
 #endif
