@@ -114,6 +114,7 @@ EXES = 	count_vertices \
 	is_viable \
 	init_occupied \
 	init_ants \
+	move_ants \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -422,4 +423,7 @@ init_occupied: init_occupied_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 init_ants: init_ants_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+move_ants: move_ants_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

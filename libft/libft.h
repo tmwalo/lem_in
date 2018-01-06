@@ -233,5 +233,6 @@ int			is_viable(t_llst *path, t_llst *unviable_paths);
 
 void			init_occupied(t_sgraph *pt_sgraph, int *occupied);
 void			init_ants(t_pathfinder *map, t_ant *ants);
+void			move_ants(t_pathfinder *map);
 
 #endif
