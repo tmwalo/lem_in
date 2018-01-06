@@ -234,5 +234,8 @@ int			is_viable(t_llst *path, t_llst *unviable_paths);
 void			init_occupied(t_sgraph *pt_sgraph, int *occupied);
 void			init_ants(t_pathfinder *map, t_ant *ants);
 void			move_ants(t_pathfinder *map);
+void			print_ant_pos(t_pathfinder *map, t_ant *ants, int index);
+void			move_ant(t_ant *ants, int *occupied, int index);
+int			next_free_or_end(t_ant ant, int *occupied, int end);
 
 #endif

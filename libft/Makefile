@@ -35,7 +35,8 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
 	  sgraph_build.c first_token.c init_pathfinder.c path_to.c all_paths.c \
 	  llst_new_empty.c path_store.c pathfinder_destroy.c llst_len.c paths_cross.c \
 	  unviable_path.c unviable_paths.c path_search.c viable_paths.c paths_destroy.c \
-	store_path.c is_viable.c init_occupied.c init_ants.c move_ants.c \
+	store_path.c is_viable.c init_occupied.c init_ants.c move_ants.c print_ant_pos.c \
+	move_ant.c next_free_or_end.c \
 
 OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_putendl_fd.o \
       ft_striter.o ft_striteri.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
@@ -60,7 +61,8 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
 	  sgraph_build.o first_token.o init_pathfinder.o path_to.o all_paths.o \
 	  llst_new_empty.o path_store.o pathfinder_destroy.o llst_len.o paths_cross.o \
 	  unviable_path.o unviable_paths.o path_search.o viable_paths.o paths_destroy.o \
-	store_path.o is_viable.o init_occupied.o init_ants.o move_ants.o \
+	store_path.o is_viable.o init_occupied.o init_ants.o move_ants.o print_ant_pos.o \
+	move_ant.o next_free_or_end.o \
 
 FLAGS = -Wall -Wextra -Werror
 
