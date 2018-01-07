@@ -26,17 +26,16 @@ t_llst	*read_file(int fd)
 	{
 		len = (int)ft_strlen(line);
 		new_node = llst_new(line, sizeof(*line) * (len + 1));
-		if (begin_ll == NULL)
-			begin_ll = new_node;
-		else
-			llst_add(&begin_ll, new_node);
+		if (new_node == NULL)
+		{
+			ret = -1;
+			break ;
+		}
+		llst_add(&begin_ll, new_node);
 		ft_memdel((void **)&line);
 	}
 	ft_memdel((void **)&line);
 	if (ret == (-1))
-	{
 		llst_del(&begin_ll);
-		return (NULL);
-	}
-	return (begin_ll);
+	return ((ret == (-1)) ? NULL : begin_ll);
 }
