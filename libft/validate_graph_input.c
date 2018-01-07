@@ -35,7 +35,7 @@ int	validate_graph_input(char *str)
 		++index;
 	}
 	ft_memdel((void **)&validators);
-	if (passed >= 2)
-		return (1);
+	if (passed == 2)
+		return (index - 1);
 	return (0);
 }
