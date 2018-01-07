@@ -21,10 +21,10 @@ int	validate_graph_input(char *str)
 	int				passed;
 
 	num_funcs = VALIDATORS + 1;
-	validators = (t_graph_input *)malloc(sizeof(t_graph_input *) * num_funcs);
+	validators = (t_graph_input *)malloc(sizeof(t_graph_input) * num_funcs);
 	if (validators == NULL)
 		return (0);
-	init_validators(&validators);
+	init_validators(validators);
 	passed = 0;
 	index = 1;
 	while ((index < num_funcs) && (passed != 2))
