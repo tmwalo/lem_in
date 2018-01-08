@@ -19,13 +19,12 @@ int	validate_graph_file(t_llst *begin_ll)
 
 	if (begin_ll == NULL)
 		return (0);
-	current_node = begin_ll;
-	while (current_node != NULL)
-	{
-		ret = validate_graph_input((char *)current_node->value);
-		if (ret == 0)
-			return (0);
-		current_node = current_node->next;
-	}
-	return (1);
+	current_node = validate_ants(begin_ll);
+	if (current_node == NULL)
+		return (0);
+	current_node = validate_rooms(current_node);
+	if (current_node == NULL)
+		return (0);
+	ret = validate_edges(current_node);
+	return (ret);
 }
