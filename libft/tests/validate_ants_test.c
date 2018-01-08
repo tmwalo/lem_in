@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate_ants.c                                    :+:      :+:    :+:   */
+/*   sgraph_build_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/08 12:14:27 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/08 13:31:49 by tmwalo           ###   ########.fr       */
+/*   Created: 2017/12/11 15:07:16 by tmwalo            #+#    #+#             */
+/*   Updated: 2017/12/11 15:16:47 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-t_llst	*validate_ants(t_llst *line)
+int	main(void)
 {
-	int		line_type;
+	t_llst		*file;
+	t_llst		*rev_file;
+	t_llst		*ret;
 
-	if (line == NULL)
-		return (NULL);
-	while (line != NULL)
-	{
-		line_type = validate_graph_input((char *)line->value);
-		if (line_type == NUM)
-			return (line->next);
-		else if (line_type == CMT)
-			;
-		else if (line_type == CMD)
-		{
-			if (cmd_start_or_end((char *)line->value))
-				return (NULL);
-		}
-		else
-			return (NULL);
-		line = line->next;
-	}
-	return (NULL);
+	file = read_file(0);
+	rev_file = llst_rev(file);
+
+	printf("%s\n", (!validate_ants(NULL)) ? "PASS" : "FAIL");
+
+	printf("return: ");
+	ret = validate_ants(rev_file);
+	if (ret)
+		printf("%p\n", ret);
+	else
+		printf("NULL\n");
+
+	llst_del(&rev_file);
+	llst_del(&file);
+	return (0);
 }
