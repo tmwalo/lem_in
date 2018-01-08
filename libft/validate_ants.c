@@ -1,29 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   validate_ants.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/08 12:14:27 by tmwalo            #+#    #+#             */
+/*   Updated: 2018/01/08 13:31:49 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 t_llst	*validate_ants(t_llst *line)
 {
 	char	**tokens;
-	int	invalid;
+	int		line_type;
 
 	if (line == NULL)
 		return (NULL);
-	invalid = 0;
-	while (line && (validate_graph_input((char *)line->value) != NUM))
+	while (line != NULL)
 	{
-		if (validate_graph_input((char *)line->value) == CMT)
+		line_type = validate_graph_input((char *)line->value);
+		if (line_type == NUM)
+			return (line->next);
+		else if (line_type == CMT)
 			;
-		else if (validate_graph_input((char *)line->value) == CMD)
+		else if (line_type == CMD)
 		{
-			tokens = ft_strtoken((char *)line->value);
-			if (!ft_strcmp(*tokens, "##start") || !ft_strcmp(*tokens, "##end"))
-				invalid = 1;
-			free_splitstr(&tokens);
-			if (invalid)
+			if (cmd_start_or_end((char *)line->value))
 				return (NULL);
 		}
 		else
 			return (NULL);
 		line = line->next;
 	}
-	return ((line) ? line->next : NULL);
+	return (NULL);
 }

@@ -1,26 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   validate_edges.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/08 12:14:44 by tmwalo            #+#    #+#             */
+/*   Updated: 2018/01/08 14:23:34 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	validate_ants(t_llst *line)
 {
 	char	**tokens;
-	int	invalid;
+	int		line_type;
 
 	if (line == NULL)
 		return (0);
-	invalid = 0;
 	while (line != NULL)
 	{
-		if (validate_graph_input((char *)line->value) == EDGE)
+		line_type = validate_graph_input((char *)line->value);
+		if ((line_type == EDGE) || (line_type == CMT))
 			;
-		else if (validate_graph_input((char *)line->value) == CMT)
-			;
-		else if (validate_graph_input((char *)line->value) == CMD)
+		else if (line_type == CMD)
 		{
-			tokens = ft_strtoken((char *)line->value);
-			if (!ft_strcmp(*tokens, "##start") || !ft_strcmp(*tokens, "##end"))
-				invalid = 1;
-			free_splitstr(&tokens);
-			if (invalid)
+			if (cmd_start_or_end((char *)line->value))
 				return (0);
 		}
 		else
