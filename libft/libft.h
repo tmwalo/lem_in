@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/03 14:43:10 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/08 16:26:58 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,10 @@ typedef struct	s_pathfinder
 
 typedef struct	s_ant
 {
-	t_llst	*path;
-	t_llst	*current_room;
-	int	arrived;
-}		t_ant;
+	t_llst		*path;
+	t_llst		*current_room;
+	int			arrived;
+}				t_ant;
 
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
@@ -228,14 +228,14 @@ t_llst			*unviable_paths(t_llst *paths, int start, int end);
 int				path_search(t_llst *search_path, t_llst *paths);
 void			viable_paths(t_llst **paths, int start, int end);
 void			paths_destroy(t_llst **paths);
-int			store_path(t_llst **all_paths, t_llst *path);
-int			is_viable(t_llst *path, t_llst *unviable_paths);
+int				store_path(t_llst **all_paths, t_llst *path);
+int				is_viable(t_llst *path, t_llst *unviable_paths);
 
 void			init_occupied(t_sgraph *pt_sgraph, int *occupied);
 void			init_ants(t_pathfinder *map, t_ant *ants);
 void			move_ants(t_pathfinder *map);
 void			print_ant_pos(t_pathfinder *map, t_ant *ants, int index);
 void			move_ant(t_ant *ants, int *occupied, int index);
-int			next_free_or_end(t_ant ant, int *occupied, int end);
+int				next_free_or_end(t_ant ant, int *occupied, int end);
 
 #endif

@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   move_ants.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/08 12:04:24 by tmwalo            #+#    #+#             */
+/*   Updated: 2018/01/08 12:04:32 by tmwalo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	move_ants(t_pathfinder *map)
 {
 	t_ant	ants[(map->pt_sgraph->num_ants)];
-	int	occupied[(map->pt_sgraph->pt_graph->vertices)];
-	int	end;
-	int	index;
+	int		occupied[(map->pt_sgraph->pt_graph->vertices)];
+	int		end;
+	int		index;
 
 	init_ants(map, ants);
 	init_occupied(map->pt_sgraph, occupied);
