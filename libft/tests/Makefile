@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2018/01/08 16:37:18 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/01/08 17:12:17 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -116,6 +116,7 @@ EXES = 	count_vertices \
 	init_ants \
 	move_ants \
 	llst_rev \
+	cmd_start_or_end \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -430,4 +431,7 @@ move_ants: move_ants_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 llst_rev: llst_rev_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+cmd_start_or_end: cmd_start_or_end_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

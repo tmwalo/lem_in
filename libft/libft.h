@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/08 16:35:25 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/08 16:59:05 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -239,5 +239,6 @@ void			move_ant(t_ant *ants, int *occupied, int index);
 int				next_free_or_end(t_ant ant, int *occupied, int end);
 
 t_llst			*llst_rev(t_llst *pt_begin);
+int				cmd_start_or_end(char *cmd);
 
 #endif

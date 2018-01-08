@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/08 12:24:06 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/08 12:38:53 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/08 17:04:07 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 int		cmd_start_or_end(char *cmd)
 {
+	char	**tokens;
 	int		is_start_or_end;
 
 	if ((cmd == NULL) || (ft_strlen(cmd) == 0))
 		return (0);
 	is_start_or_end = 0;
-	tokens = ft_strtoken(cmd);
+	tokens = ft_strtok(cmd);
 	if (ft_strcmp(*tokens, "##start") == 0)
 		is_start_or_end = 1;
 	else if (ft_strcmp(*tokens, "##end") == 0)
