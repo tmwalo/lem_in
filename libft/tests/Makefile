@@ -118,6 +118,7 @@ EXES = 	count_vertices \
 	llst_rev \
 	cmd_start_or_end \
 	validate_ants \
+	validate_rooms \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -438,4 +439,7 @@ cmd_start_or_end: cmd_start_or_end_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 validate_ants: validate_ants_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+validate_rooms: validate_rooms_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

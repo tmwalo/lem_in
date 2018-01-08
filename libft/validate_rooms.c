@@ -22,7 +22,7 @@ t_llst	*validate_rooms(t_llst *line)
 		return (NULL);
 	start_cmd = 0;
 	end_cmd = 0;
-	while (line && (validate_graph_input((char *)line->value) == EDGE))
+	while (line && (validate_graph_input((char *)line->value) != EDGE))
 	{
 		line_type = validate_graph_input((char *)line->value);
 		if ((line_type == VERTX) || (line_type == CMT))
