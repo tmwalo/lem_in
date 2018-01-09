@@ -14,28 +14,39 @@
 
 int		main(void)
 {
-	t_llst			*file;
-	t_llst			*rev_file;
-	t_sgraph		*pt_sgraph;
-	t_pathfinder	*pt_map;
-	int				start;
-	int				end;
+	t_sgraph		*sgraph;
+	t_pathfinder	*map;
+	void				*start;
+	void				*end;
+	int				error;
 
-	file = read_file(0);
-	rev_file = llst_rev(file);
-	pt_sgraph = sgraph_build(file, rev_file);
-	pt_map = (t_pathfinder *)ft_memalloc(sizeof(t_pathfinder));
-	init_pathfinder(pt_map, pt_sgraph);
-
-	start = *(int *)st_get(pt_map->pt_sgraph->st_begin, pt_map->pt_sgraph->start);
-	end = *(int *)st_get(pt_map->pt_sgraph->st_begin, pt_map->pt_sgraph->end);
-	all_paths(pt_map, start, end);
-	viable_paths(&(pt_map->paths), start, end);
-
-	move_ants(pt_map);
-
-	sgraph_destroy(&pt_sgraph);
-	llst_del(&rev_file);
-	llst_del(&file);
+	error = 0;
+	sgraph = prepare_sgraph();
+	if (sgraph == NULL)
+		error = 1;
+	map = (t_pathfinder *)ft_memalloc(sizeof(t_pathfinder));
+	if (!error && (map == NULL))
+		error = 1;
+	if (!error && !init_pathfinder(map, sgraph))
+	{
+		error = 1;
+		sgraph_destroy(&sgraph);
+	}
+	if (!error)
+	{
+		start = st_get(map->pt_sgraph->st_begin, map->pt_sgraph->start);
+		end = st_get(map->pt_sgraph->st_begin, map->pt_sgraph->end);
+		all_paths(map, *(int *)start, *(int *)end);
+	}
+	if (!error && (map->paths == NULL))
+		error = 1;
+	if (!error)
+		viable_paths(&(map->paths), *(int *)start, *(int *)end);
+	if (!error)
+		move_ants(map);
+	if (!error)
+		pathfinder_destroy(&map);
+	if (error)
+		ft_putstr_fd("Error\n", 2);
 	return (0);
 }
