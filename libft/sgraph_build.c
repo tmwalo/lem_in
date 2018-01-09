@@ -6,13 +6,13 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/11 12:32:21 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/11 15:03:57 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/09 10:43:18 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_sgraph	*sgraph_build(t_llst *file)
+t_sgraph	*sgraph_build(t_llst *file, t_llst *rev_file)
 {
 	t_sgraph	*sgraph;
 	int			vertices;
@@ -20,7 +20,7 @@ t_sgraph	*sgraph_build(t_llst *file)
 	char		*end;
 	int			error;
 
-	if ((file == NULL) || !validate_graph_file(file))
+	if ((file == NULL) || (rev_file == NULL) || !validate_graph_file(rev_file))
 		return (NULL);
 	vertices = count_vertices(file);
 	start = find_prev_cmd_target(file, "##start");

@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/08 16:59:05 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/09 10:44:18 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -211,7 +211,7 @@ void			st_destroy(t_llst **alst);
 void			skeys_destroy(t_sgraph *pt_sgraph);
 void			sgraph_destroy(t_sgraph **dbl_pt_sgraph);
 
-t_sgraph		*sgraph_build(t_llst *file);
+t_sgraph		*sgraph_build(t_llst *file, t_llst *rev_file);
 
 char			*first_token(char *str);
 
