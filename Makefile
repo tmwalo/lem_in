@@ -14,19 +14,20 @@ NAME = lem-in
 
 CC = gcc
 
+CFLAGS = -Wall -Wextra -Werror -I libft/
+
 SRC = lem_in.c
 
 OBJ = lem_in.o
 
 DEPS = libft/libft.h
 
-FLAGS = -Wall -Wextra -Werror
-
 all: $(NAME)
 
 $(NAME): $(SRC) $(DEPS)
-	$(CC) $(FLAGS) -I libft/ -o $(OBJ) -c $(SRC)
-	$(CC) $(FLAGS) -I libft/ -o $(NAME) $(OBJ) -L libft/ -lft
+	$(CC) $(CFLAGS) -o $(OBJ) -c $(SRC)
+	$(MAKE) -C libft/ all clean
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L libft/ -lft
 
 clean:
 	/bin/rm -f $(OBJ)
