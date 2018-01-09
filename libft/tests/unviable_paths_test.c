@@ -4,6 +4,7 @@
 int	main(void)
 {
 	t_llst			*file;
+	t_llst			*rev_file;
 	t_sgraph		*pt_sgraph;
 	t_pathfinder	*pt_map;
 	int				start;
@@ -14,7 +15,8 @@ int	main(void)
 
 
 	file = read_file(0);
-	pt_sgraph = sgraph_build(file);
+	rev_file = llst_rev(file);
+	pt_sgraph = sgraph_build(file, rev_file);
 	pt_map = (t_pathfinder *)ft_memalloc(sizeof(t_pathfinder));
 	init_pathfinder(pt_map, pt_sgraph);
 
@@ -37,6 +39,7 @@ int	main(void)
 	}
 
 	sgraph_destroy(&pt_sgraph);
+	llst_del(&rev_file);
 	llst_del(&file);
 	return (0);
 }
