@@ -37,7 +37,7 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
 	  unviable_path.c unviable_paths.c path_search.c viable_paths.c paths_destroy.c \
 	  store_path.c is_viable.c init_occupied.c init_ants.c move_ants.c print_ant_pos.c \
 	  move_ant.c next_free_or_end.c llst_rev.c cmd_start_or_end.c validate_ants.c \
-	  validate_rooms.c validate_edges.c \
+	  validate_rooms.c validate_edges.c prepare_sgraph.c \
 
 OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_putendl_fd.o \
       ft_striter.o ft_striteri.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
@@ -64,7 +64,7 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
 	  unviable_path.o unviable_paths.o path_search.o viable_paths.o paths_destroy.o \
 	  store_path.o is_viable.o init_occupied.o init_ants.o move_ants.o print_ant_pos.o \
 	  move_ant.o next_free_or_end.o llst_rev.o cmd_start_or_end.o validate_ants.o \
-	  validate_rooms.o validate_edges.o \
+	  validate_rooms.o validate_edges.o prepare_sgraph.o \
 
 FLAGS = -Wall -Wextra -Werror
 

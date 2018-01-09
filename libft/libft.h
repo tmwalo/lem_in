@@ -243,5 +243,6 @@ int				cmd_start_or_end(char *cmd);
 t_llst			*validate_ants(t_llst *line);
 t_llst			*validate_rooms(t_llst *line);
 int			validate_edges(t_llst *line);
+t_sgraph		*prepare_sgraph(void);
 
 #endif

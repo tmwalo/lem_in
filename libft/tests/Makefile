@@ -120,6 +120,7 @@ EXES = 	count_vertices \
 	validate_ants \
 	validate_rooms \
 	validate_edges \
+	prepare_sgraph \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -446,4 +447,7 @@ validate_rooms: validate_rooms_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 validate_edges: validate_edges_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+prepare_sgraph: prepare_sgraph_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
