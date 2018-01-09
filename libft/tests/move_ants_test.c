@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/03 13:11:28 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/03 13:12:03 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/09 14:17:13 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@
 int	main(void)
 {
 	t_llst		*file;
+	t_llst		*rev_file;
 	t_sgraph	*pt_sgraph;
 	t_pathfinder	*pt_map;
 	int		start;
 	int		end;
 
 	file = read_file(0);
-	pt_sgraph = sgraph_build(file);
+	rev_file = llst_rev(file);
+	pt_sgraph = sgraph_build(file, rev_file);
 	pt_map = (t_pathfinder *)ft_memalloc(sizeof(t_pathfinder));
 	init_pathfinder(pt_map, pt_sgraph);
 
@@ -35,5 +37,6 @@ int	main(void)
 
 	sgraph_destroy(&pt_sgraph);
 	llst_del(&file);
+	llst_del(&rev_file);
 	return (0);
 }
