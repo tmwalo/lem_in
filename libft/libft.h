@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/10 12:47:54 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/10 12:55:53 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -244,5 +244,6 @@ t_llst			*validate_ants(t_llst *line);
 t_llst			*validate_rooms(t_llst *line);
 int				validate_edges(t_llst *line);
 t_sgraph		*prepare_sgraph(void);
+void			llst_del_nodes(t_llst **alst);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2018/01/08 17:12:17 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/01/10 13:14:26 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -121,6 +121,7 @@ EXES = 	count_vertices \
 	validate_rooms \
 	validate_edges \
 	prepare_sgraph \
+	llst_del_nodes \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -450,4 +451,7 @@ validate_edges: validate_edges_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 prepare_sgraph: prepare_sgraph_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+llst_del_nodes: llst_del_nodes_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
