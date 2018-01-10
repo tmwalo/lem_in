@@ -6,7 +6,7 @@
 #    By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/31 12:12:03 by tmwalo            #+#    #+#              #
-#    Updated: 2018/01/10 13:14:26 by tmwalo           ###   ########.fr        #
+#    Updated: 2018/01/10 14:14:06 by tmwalo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -122,6 +122,7 @@ EXES = 	count_vertices \
 	validate_edges \
 	prepare_sgraph \
 	llst_del_nodes \
+	store_all_paths \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -454,4 +455,7 @@ prepare_sgraph: prepare_sgraph_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 llst_del_nodes: llst_del_nodes_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+store_all_paths: store_all_paths_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
