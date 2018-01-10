@@ -30,14 +30,13 @@ int		main(void)
 	if (!error)
 		store_all_paths(map);
 	if (!error && (map->paths != NULL))
-	{
-		viable_paths(&(map->paths), *(int *)start, *(int *)end);
-		move_ants(map);
-		pathfinder_destroy(&map);
-	}
+		solve_map(&map, &file);
 	else
 		error = 1;
 	if (error)
+	{
 		ft_putstr_fd("Error\n", 2);
+		ft_memdel((void **)(&map));
+	}
 	return (0);
 }
