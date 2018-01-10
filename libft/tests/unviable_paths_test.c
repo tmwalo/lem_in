@@ -38,7 +38,8 @@ int	main(void)
 		current_node = current_node->next;
 	}
 
-	sgraph_destroy(&pt_sgraph);
+	llst_del_nodes(&unviable_paths_ll);
+	pathfinder_destroy(&pt_map);
 	llst_del(&rev_file);
 	llst_del(&file);
 	return (0);
