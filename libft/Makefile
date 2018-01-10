@@ -73,25 +73,25 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(SRC)
-	@echo "Creating object files . . ."
+	@echo "Creating object files ..."
 	@gcc -c $(SRC) $(FLAGS)
-	@echo "Creating library . . ."
+	@echo "Creating library ..."
 	@ar rc $(NAME) $(OBJ)
-	@echo "Indexing library . . ."
+	@echo "Indexing library ..."
 	@ranlib $(NAME)
 
 create: all clean
 	@mv libft.a tests/
-	@echo "move library to tests/"
+	@echo "Move library to tests/"
 	@cp libft.h tests/
-	@echo "copy header to tests/"
+	@echo "Copy header to tests/"
 
 clean:
-	@echo "Cleaning object files . . ."
+	@echo "Cleaning object files ..."
 	@/bin/rm -f $(OBJ)
 
 fclean: clean
-	@echo "Cleaning binary . . ."
+	@echo "Cleaning binary ..."
 	@/bin/rm -f $(NAME)
 
 re: fclean all

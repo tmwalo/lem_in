@@ -25,14 +25,19 @@ DEPS = libft/libft.h
 all: $(NAME)
 
 $(NAME): $(SRC) $(DEPS)
-	$(CC) $(CFLAGS) -o $(OBJ) -c $(SRC)
-	$(MAKE) -C libft/ all clean
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L libft/ -lft
+	@echo "Create object file ..."
+	@$(CC) $(CFLAGS) -o $(OBJ) -c $(SRC)
+	@echo "Compile library ..."
+	@$(MAKE) -C libft/ all clean
+	@echo "Compile program ..."
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L libft/ -lft
 
 clean:
-	/bin/rm -f $(OBJ)
+	@echo "Clean object file"
+	@/bin/rm -f $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@echo "Clean executable"
+	@/bin/rm -f $(NAME)
 
 re: fclean all
