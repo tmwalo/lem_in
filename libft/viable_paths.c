@@ -36,7 +36,7 @@ void	viable_paths(t_llst **paths, int start, int end)
 		}
 		*paths = (*paths)->next;
 	}
-	paths_destroy(&pt_unviable_paths);
+	llst_del(&pt_unviable_paths);
 	paths_destroy(paths);
 	*paths = pt_viable_paths;
 }
