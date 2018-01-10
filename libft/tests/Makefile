@@ -123,6 +123,7 @@ EXES = 	count_vertices \
 	prepare_sgraph \
 	llst_del_nodes \
 	store_all_paths \
+	solve_map \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -458,4 +459,7 @@ llst_del_nodes: llst_del_nodes_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 store_all_paths: store_all_paths_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+solve_map: solve_map_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
