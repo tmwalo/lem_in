@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/10 17:24:45 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/10 17:57:14 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -246,5 +246,6 @@ int				validate_edges(t_llst *line);
 t_sgraph		*prepare_sgraph(t_llst **rev_file);
 void			llst_del_nodes(t_llst **alst);
 void			store_all_paths(t_pathfinder *map);
+void			solve_map(t_pathfinder **map, t_llst **file);
 
 #endif
