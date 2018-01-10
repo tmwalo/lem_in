@@ -25,6 +25,7 @@ int	store_path(t_llst **all_paths, t_llst *path)
 		return (0);
 	}
 	new_node->value = path;
+	new_node->next = NULL;
 	llst_add(all_paths, new_node);
 	return (1);
 }
