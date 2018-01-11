@@ -124,6 +124,7 @@ EXES = 	count_vertices \
 	llst_del_nodes \
 	store_all_paths \
 	solve_map \
+	path_delete \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -462,4 +463,7 @@ store_all_paths: store_all_paths_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 solve_map: solve_map_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+path_delete: path_delete_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

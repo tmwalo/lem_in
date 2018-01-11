@@ -247,5 +247,6 @@ t_sgraph		*prepare_sgraph(t_llst **rev_file);
 void			llst_del_nodes(t_llst **alst);
 void			store_all_paths(t_pathfinder *map);
 void			solve_map(t_pathfinder **map, t_llst **file);
+void			path_delete(t_llst **paths, t_llst *path_key);
 
 #endif
