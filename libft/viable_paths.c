@@ -15,28 +15,20 @@
 void	viable_paths(t_llst **paths, int start, int end)
 {
 	t_llst		*pt_unviable_paths;
-	t_llst		*pt_viable_paths;
+	t_llst		*current_node;
+	t_llst		*next_node;
 
 	if ((paths == NULL) || (*paths == NULL) || (start < 0) || (end < 0))
 		return ;
 	pt_unviable_paths = unviable_paths(*paths, start, end);
 	if (pt_unviable_paths == NULL)
 		return ;
-	pt_viable_paths = NULL;
-	while (*paths != NULL)
+	current_node = pt_unviable_paths;
+	while (current_node != NULL)
 	{
-		if (is_viable((*paths)->value, pt_unviable_paths))
-		{
-			if (!store_path(&pt_viable_paths, (*paths)->value))
-			{
-				paths_destroy(&pt_unviable_paths);
-				paths_destroy(&pt_viable_paths);
-				return ;
-			}
-		}
-		*paths = (*paths)->next;
+		next_node = current_node->next;
+		path_delete(paths, (t_llst *)current_node->value);
+		current_node = next_node;
 	}
-	llst_del(&pt_unviable_paths);
-	paths_destroy(paths);
-	*paths = pt_viable_paths;
+	llst_del_nodes(&pt_unviable_paths);
 }
