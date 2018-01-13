@@ -21,7 +21,7 @@ t_llst	*validate_ants(t_llst *line)
 	while (line != NULL)
 	{
 		line_type = validate_graph_input((char *)line->value);
-		if (line_type == NUM)
+		if (line_type == NUM_ANTS)
 			return (line->next);
 		else if (line_type == CMT)
 			;

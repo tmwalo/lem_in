@@ -125,6 +125,7 @@ EXES = 	count_vertices \
 	store_all_paths \
 	solve_map \
 	path_delete \
+	ft_isnum_ants \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -466,4 +467,7 @@ solve_map: solve_map_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 path_delete: path_delete_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+ft_isnum_ants: ft_isnum_ants_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

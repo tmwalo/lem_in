@@ -22,5 +22,5 @@ void	init_validators(t_graph_input *pt_validator)
 	pt_validator[EDGE] = ft_isedge;
 	pt_validator[CMD] = ft_iscommand;
 	pt_validator[CMT] = ft_iscomment;
-	pt_validator[NUM] = ft_isnum;
+	pt_validator[NUM_ANTS] = ft_isnum_ants;
 }

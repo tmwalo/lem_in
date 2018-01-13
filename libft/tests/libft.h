@@ -19,12 +19,12 @@
 
 # define BUFF_SIZE 4
 
-# define NEMPTY	1
-# define VERTX	2
-# define EDGE	3
-# define CMD	4
-# define CMT	5
-# define NUM	6
+# define NEMPTY	   1
+# define VERTX	   2
+# define EDGE	   3
+# define CMD	   4
+# define CMT	   5
+# define NUM_ANTS  6
 
 # define VALIDATORS 6
 
@@ -248,5 +248,6 @@ void			llst_del_nodes(t_llst **alst);
 void			store_all_paths(t_pathfinder *map);
 void			solve_map(t_pathfinder **map, t_llst **file);
 void			path_delete(t_llst **paths, t_llst *path_key);
+int			ft_isnum_ants(char *str);
 
 #endif

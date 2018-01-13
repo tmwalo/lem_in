@@ -22,5 +22,5 @@ int	ft_isnum(char *str)
 			return (0);
 		++str;
 	}
-	return (NUM);
+	return (1);
 }
