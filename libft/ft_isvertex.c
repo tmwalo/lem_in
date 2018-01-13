@@ -28,6 +28,8 @@ int	ft_isvertex(char *str)
 		++ntokens;
 		if ((ntokens == 1) && (ft_iscommand(*tokens) || ft_iscomment(*tokens)))
 			error = 1;
+		if ((ntokens == 1) && (**tokens == 'L'))
+			error = 1;
 		if ((ntokens >= 2) && (ntokens <= 3) && (!ft_isnum(*tokens)))
 			error = 1;
 		if ((ntokens == 4) && (!ft_iscomment(*tokens)))
