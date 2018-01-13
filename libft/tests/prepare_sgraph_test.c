@@ -23,6 +23,7 @@ int	main(void)
 	if (sgraph)
 	{
 		sgraph_print(sgraph);
+		llst_del(&file);
 		sgraph_destroy(&sgraph);
 	}
 	else
