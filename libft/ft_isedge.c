@@ -28,7 +28,7 @@ int	ft_isedge(char *str)
 	while ((*token1 != '\0') && !error)
 	{
 		++ntokens;
-		if (ft_iscommand(*token1) || ft_iscomment(*token1) || (ntokens > 2))
+		if (!ft_isvertex_no_coords(*token1) || (ntokens > 2))
 			error = 1;
 		++token1;
 	}

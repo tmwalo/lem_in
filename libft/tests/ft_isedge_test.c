@@ -29,6 +29,12 @@ int		main(void)
 	ret = ft_isedge("room12-room764");
 	printf("%s\n", (ret) ? "PASS" : "FAIL");
 
+	ret = ft_isedge("L12-764");
+	printf("%s\n", (!ret) ? "PASS" : "FAIL");
+
+	ret = ft_isedge("12-L764");
+	printf("%s\n", (!ret) ? "PASS" : "FAIL");
+
 	ret = ft_isedge("#command-764");
 	printf("%s\n", (!ret) ? "PASS" : "FAIL");
 
