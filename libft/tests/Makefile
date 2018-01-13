@@ -126,6 +126,7 @@ EXES = 	count_vertices \
 	solve_map \
 	path_delete \
 	ft_isnum_ants \
+	ft_isvertex_no_coords \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -470,4 +471,7 @@ path_delete: path_delete_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 ft_isnum_ants: ft_isnum_ants_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+ft_isvertex_no_coords: ft_isvertex_no_coords_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

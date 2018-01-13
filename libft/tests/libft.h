@@ -249,5 +249,6 @@ void			store_all_paths(t_pathfinder *map);
 void			solve_map(t_pathfinder **map, t_llst **file);
 void			path_delete(t_llst **paths, t_llst *path_key);
 int			ft_isnum_ants(char *str);
+int			ft_isvertex_no_coords(char *str);
 
 #endif
