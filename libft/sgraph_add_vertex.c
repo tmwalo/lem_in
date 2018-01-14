@@ -27,8 +27,10 @@ int	sgraph_add_vertex(t_sgraph *pt_sgraph, char *str)
 	if (st_get(pt_sgraph->st_begin, *tokens) == NULL)
 	{
 		key_index = st_size(pt_sgraph->st_begin);
-		(pt_sgraph->keys)[key_index] = ft_strdup(*tokens);
-		st_put(&(pt_sgraph->st_begin), *tokens, key_index);
+		if (((pt_sgraph->keys)[key_index] = ft_strdup(*tokens)) == NULL)
+			error = 1;
+		if (!st_put(&(pt_sgraph->st_begin), *tokens, key_index))
+			error = 1;
 	}
 	else
 		error = 1;
