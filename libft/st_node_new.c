@@ -33,9 +33,7 @@ t_st_node	*st_node_new(void *key, int size_k, void *value, int size_v)
 	pt_st_node->size_value = size_v;
 	if (error)
 	{
-		ft_memdel((void **)(&(pt_st_node->key)));
-		ft_memdel((void **)(&(pt_st_node->value)));
-		ft_memdel((void **)(&(pt_st_node)));
+		st_node_delone(&pt_st_node);
 		return (NULL);
 	}
 	return (pt_st_node);
