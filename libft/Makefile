@@ -39,6 +39,7 @@ SRC = ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c ft_putendl.c ft_pu
 	  move_ant.c next_free_or_end.c llst_rev.c cmd_start_or_end.c validate_ants.c \
 	  validate_rooms.c validate_edges.c prepare_sgraph.c llst_del_nodes.c store_all_paths.c \
 	  solve_map.c path_delete.c ft_isnum_ants.c ft_isvertex_no_coords.c cmd_chars.c \
+	  cmd_target_store.c \
 
 OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_putendl_fd.o \
       ft_striter.o ft_striteri.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
@@ -67,6 +68,7 @@ OBJ = ft_putchar.o ft_putchar_fd.o ft_putstr.o ft_putstr_fd.o ft_putendl.o ft_pu
 	  move_ant.o next_free_or_end.o llst_rev.o cmd_start_or_end.o validate_ants.o \
 	  validate_rooms.o validate_edges.o prepare_sgraph.o llst_del_nodes.o store_all_paths.o \
 	  solve_map.o path_delete.o ft_isnum_ants.o ft_isvertex_no_coords.o cmd_chars.o \
+	  cmd_target_store.o \
 
 FLAGS = -Wall -Wextra -Werror
 

@@ -26,8 +26,8 @@ int	init_sgraph(t_sgraph *sgraph, int vertices, char *s, char *e)
 		sgraph->keys = (char **)ft_memalloc(sizeof(char *) * vertices);
 		sgraph->pt_graph = (t_graph *)ft_memalloc(sizeof(t_graph));
 		ret = init_graph(sgraph->pt_graph, vertices);
-		sgraph->start = first_token(s);
-		sgraph->end = first_token(e);
+		sgraph->start = cmd_target_store(s);
+		sgraph->end = cmd_target_store(e);
 		if ((sgraph->keys == NULL) || (sgraph->pt_graph == NULL) || (ret == 0))
 			error = 1;
 		if ((sgraph->start == NULL) || (sgraph->end == NULL))
