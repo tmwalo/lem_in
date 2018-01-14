@@ -15,7 +15,7 @@
 int	graph_src_size(t_llst *begin_ll)
 {
 	t_llst	*current_node;
-	int		ret;
+	char		**tokens;
 	int		src_size;
 	int		matches;
 
@@ -23,11 +23,12 @@ int	graph_src_size(t_llst *begin_ll)
 	current_node = begin_ll;
 	while (current_node != NULL)
 	{
-		ret = ft_isnum((char *)current_node->value);
-		if (ret)
+		if (ft_isnum_ants((char *)current_node->value))
 		{
-			src_size = ft_atoi((char *)current_node->value);
+			tokens = ft_strtok((char *)current_node->value);
+			src_size = ft_atoi(*tokens);
 			++matches;
+			free_splitstr(&tokens);
 		}
 		current_node = current_node->next;
 	}
