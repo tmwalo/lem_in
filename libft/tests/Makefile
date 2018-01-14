@@ -127,6 +127,7 @@ EXES = 	count_vertices \
 	path_delete \
 	ft_isnum_ants \
 	ft_isvertex_no_coords \
+	cmd_chars \
 
 rmexes:
 	/bin/rm $(EXES)
@@ -474,4 +475,7 @@ ft_isnum_ants: ft_isnum_ants_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
 
 ft_isvertex_no_coords: ft_isvertex_no_coords_test.c
+	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)
+
+cmd_chars: cmd_chars_test.c
 	gcc -o $@ $@_test.c -g -L. -lft $(FLAGS)

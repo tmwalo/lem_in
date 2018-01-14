@@ -17,22 +17,22 @@ int		main(void)
 {
 	int		ret;
 
-	ret = ft_iscommand(NULL);
+	ret = cmd_chars(NULL);
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
 
-	ret = ft_iscommand("");
+	ret = cmd_chars("");
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
 
-	ret = ft_iscommand("##start");
+	ret = cmd_chars("##start");
 	printf("%s\n", (ret) ? "PASS" : "FAIL");
 
-	ret = ft_iscommand("##start #comment");
+	ret = cmd_chars("##start #comment");
 	printf("%s\n", (ret) ? "PASS" : "FAIL");
 
-	ret = ft_iscommand("#not a command");
+	ret = cmd_chars("#not a command");
 	printf("%s\n", (ret == 0) ? "PASS" : "FAIL");
 
-	ret = ft_iscommand("###3hashes");
+	ret = cmd_chars("###3hashes");
 	printf("%s\n", (ret) ? "PASS" : "FAIL");
 
 	return (0);
