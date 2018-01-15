@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/10 17:57:14 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/15 11:57:24 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,11 +164,11 @@ void			llst_delone(t_llst **alst);
 void			llst_del(t_llst **alst);
 
 int				init_graph(t_graph *graph, int vertices);
-void			graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b);
+int				graph_add_edge(t_graph *pt_graph, int vertx_a, int vertx_b);
 
 t_st_node		*st_node_new(void *key, int size_k, void *value, int size_v);
 void			st_node_delone(t_st_node **alst);
-int			st_put(t_llst **begin, char *key, int value);
+int				st_put(t_llst **begin, char *key, int value);
 void			*st_get(t_llst *begin, void *key);
 int				st_contains(t_llst *begin, void *key);
 int				st_size(t_llst *begin);
@@ -248,9 +248,9 @@ void			llst_del_nodes(t_llst **alst);
 void			store_all_paths(t_pathfinder *map);
 void			solve_map(t_pathfinder **map, t_llst **file);
 void			path_delete(t_llst **paths, t_llst *path_key);
-int			ft_isnum_ants(char *str);
-int			ft_isvertex_no_coords(char *str);
-int			cmd_chars(char *str);
+int				ft_isnum_ants(char *str);
+int				ft_isvertex_no_coords(char *str);
+int				cmd_chars(char *str);
 char			*cmd_target_store(char *str);
 
 #endif

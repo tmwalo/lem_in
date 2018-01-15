@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 11:52:07 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/29 12:20:14 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/15 11:17:06 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_st_node	*st_node_new(void *key, int size_k, void *value, int size_v)
 {
 	t_st_node	*pt_st_node;
-	int		error;
+	int			error;
 
 	if ((key == NULL) || (size_k <= 0) || (value == NULL) || (size_v <= 0))
 		return (NULL);

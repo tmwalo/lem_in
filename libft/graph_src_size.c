@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 14:27:20 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/04 14:27:37 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/15 11:10:54 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	graph_src_size(t_llst *begin_ll)
 {
 	t_llst	*current_node;
-	char		**tokens;
+	char	**tokens;
 	int		src_size;
 	int		matches;
 
