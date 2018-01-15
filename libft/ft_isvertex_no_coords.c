@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/15 11:07:53 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/15 11:07:59 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/15 13:45:46 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_isvertex_no_coords(char *str)
 	if ((str == NULL) || (ft_strlen(str) == 0))
 		return (0);
 	tokens = ft_strtok(str);
+	if (tokens == NULL)
+		return (0);
 	error = 0;
 	ntokens = 0;
 	while ((*tokens != '\0') && !error)

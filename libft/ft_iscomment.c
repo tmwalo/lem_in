@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 14:02:55 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/11/30 14:46:13 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/15 12:20:55 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_iscomment(char *str)
 	if ((str == NULL) || (ft_strlen(str) == 0))
 		return (0);
 	tokens = ft_strtok(str);
+	if (tokens == NULL)
+		return (0);
 	if (*tokens != '\0')
 	{
 		if (((*tokens)[0] == '#') && ((*tokens)[1] != '#'))
