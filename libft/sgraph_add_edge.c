@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 11:12:22 by tmwalo            #+#    #+#             */
-/*   Updated: 2017/12/06 15:36:14 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/15 12:04:32 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	sgraph_add_edge(t_sgraph *pt_sgraph, char *str)
 	free_splitstr(&edge);
 	if ((index_a == NULL) || (index_b == NULL))
 		return (0);
-	graph_add_edge(pt_sgraph->pt_graph, *(int *)index_a, *(int *)index_b);
-	return (1);
+	if (graph_add_edge(pt_sgraph->pt_graph, *(int *)index_a, *(int *)index_b))
+		return (1);
+	return (0);
 }
