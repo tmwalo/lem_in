@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/09 17:07:11 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/10 17:36:34 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/15 15:53:44 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		main(void)
 	if (error)
 	{
 		ft_putstr_fd("Error\n", 2);
-		ft_memdel((void **)(&map));
+		cleanup(&file, &sgraph, &map);
 	}
 	return (0);
 }

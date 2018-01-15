@@ -6,7 +6,7 @@
 /*   By: tmwalo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/25 12:37:41 by tmwalo            #+#    #+#             */
-/*   Updated: 2018/01/15 11:57:24 by tmwalo           ###   ########.fr       */
+/*   Updated: 2018/01/15 15:51:03 by tmwalo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -252,5 +252,6 @@ int				ft_isnum_ants(char *str);
 int				ft_isvertex_no_coords(char *str);
 int				cmd_chars(char *str);
 char			*cmd_target_store(char *str);
+void			cleanup(t_llst **file, t_sgraph **sgraph, t_pathfinder **map);
 
 #endif
